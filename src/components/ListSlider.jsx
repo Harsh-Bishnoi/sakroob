@@ -5,7 +5,7 @@ import { LISTSLIDER_DATA } from '../utils/helper'
 const ListSlider = () => {
     return (
         <>
-            <div className='pt-[27px] pb-6'>
+            <div className='pt-[27px] pb-6 max-w-[1920px] mx-auto'>
                 <Marquee>
                     <div className="flex gap-3">
                         {LISTSLIDER_DATA.map((list, index) => (
