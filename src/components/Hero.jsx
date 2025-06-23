@@ -7,7 +7,7 @@ import CustomButton from '../components/common/CustomButton'
 const Hero = () => {
     return (
         <>
-            <div className="flex justify-center items-center px-[28px]">
+            <div className="flex justify-center items-center px-7">
                 <div className="max-w-[1384px] mx-auto">
                     <Carousel showArrows={false} showThumbs={false} showStatus={false} infiniteLoop interval={3000}>
                         <div className='bg-[url(src/assets/images/png/hero-bg-img.png)] h-[650px] w-full'>

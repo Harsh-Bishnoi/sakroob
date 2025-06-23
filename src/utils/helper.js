@@ -1,4 +1,4 @@
-import { gameIcon, graphicIcon, moniterIcon, smartWatchIcon, storageIcon, televisionIcon } from "./Icons";
+import { deliveryIcon, gameIcon, giftIcon, graphicIcon, moniterIcon, premiumIcon, returnIcon, smartWatchIcon, storageIcon, supportIcon, televisionIcon } from "./Icons";
 
 export const LISTSLIDER_DATA = [
     {
@@ -48,5 +48,33 @@ export const LISTSLIDER_DATA = [
     {
         icon: graphicIcon,
         title: "Graphic Card"
+    }
+]
+
+export const SUPPORT_DATA = [
+    {
+        icon: deliveryIcon,
+        title: "EXPRESS Delivery",
+        description: "Order Now"
+    },
+    {
+        icon: returnIcon,
+        title: "Easy Return",
+        description: "30 days return"
+    },
+    {
+        icon: supportIcon,
+        title: "24/7 Support",
+        description: "Premium Services"
+    },
+    {
+        icon: premiumIcon,
+        title: "Premium Warranty",
+        description: "Up to 2 years"
+    },
+    {
+        icon: giftIcon,
+        title: "Best Special Gift",
+        description: "For Order"
     }
 ]

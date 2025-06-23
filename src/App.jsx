@@ -1,6 +1,7 @@
 import './App.css'
 import Hero from './components/Hero'
 import ListSlider from './components/ListSlider'
+import Support from './components/Support'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <ListSlider />
       <Hero />
+      <Support />
     </>
   )
 }
