@@ -29,3 +29,7 @@ body {
     background: #112D49 !important;
     width: 51px !important;
 }
+
+.delete-svg:hover path {
+    fill: red;
+}
