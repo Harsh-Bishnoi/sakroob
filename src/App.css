@@ -33,3 +33,6 @@ body {
 .delete-svg:hover path {
     fill: red;
 }
+.swiper-arrow:hover path {
+    stroke: white;
+}
