@@ -1,4 +1,4 @@
-import { DeliveryIcon, GameIcon, GiftIcon, GraphicIcon, MoniterIcon, PremiumIcon, ReturnIcon, SmartWatchIcon, StorageIcon, SupportIcon, TelevisionIcon } from './Icons'
+import { DeliveryIcon, FacebookSvg, GameIcon, GiftIcon, GraphicIcon, InstagramSvg, MoniterIcon, PremiumIcon, ReturnIcon, SmartWatchIcon, StorageIcon, SupportIcon, TelevisionIcon, TwitterSvg, YoutubeSvg } from './Icons'
 import manImg from '../assets/images/png/testimonial-swiper-img-1.png'
 import womanImg from '../assets/images/png/testimonial-swiper-img-2.png'
 
@@ -102,4 +102,31 @@ export const TESTMONIAL_DATA = [
         title: "Darrell Steward",
         job: "Manager"
     }
+]
+
+export const FOOTER_LINKS = [
+    "Shipping",
+    "Warranty",
+    "FAQs",
+    "Blog",
+    "Contact"
+]
+
+export const SOCIAL_LINKS = [
+    {
+        icon: FacebookSvg,
+        link: "https://www.facebook.com/"
+    },
+    {
+        icon: InstagramSvg,
+        link: "https://www.instagram.com/"
+    },
+    {
+        icon: TwitterSvg,
+        link: "https://x.com/"
+    },
+    {
+        icon: YoutubeSvg,
+        link: "https://www.youtube.com/"
+    },
 ]

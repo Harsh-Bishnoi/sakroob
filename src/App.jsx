@@ -1,6 +1,7 @@
 import './App.css'
 import AddToCart from './components/AddToCart'
 import Blog from './components/Blog'
+import Footer from './components/Footer'
 import Hero from './components/Hero'
 import ListSlider from './components/ListSlider'
 import Product from './components/Product'
@@ -17,6 +18,7 @@ function App() {
       <Product />
       <Blog />
       <Testimonials />
+      <Footer />
       <AddToCart />
     </>
   )
