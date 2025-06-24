@@ -33,6 +33,12 @@ body {
 .delete-svg:hover path {
     fill: red;
 }
+
 .swiper-arrow:hover path {
     stroke: white;
+}
+
+.icon-size svg {
+    height: 21px !important;
+    width: 21px !important;
 }
