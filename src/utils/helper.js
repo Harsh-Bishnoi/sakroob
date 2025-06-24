@@ -1,80 +1,81 @@
-import { deliveryIcon, gameIcon, giftIcon, graphicIcon, moniterIcon, premiumIcon, returnIcon, smartWatchIcon, storageIcon, supportIcon, televisionIcon } from "./Icons";
+import { DeliveryIcon, GameIcon, GiftIcon, GraphicIcon, MoniterIcon, PremiumIcon, ReturnIcon, SmartWatchIcon, StorageIcon, SupportIcon, TelevisionIcon } from './Icons'
 import manImg from '../assets/images/png/testimonial-swiper-img-1.png'
 import womanImg from '../assets/images/png/testimonial-swiper-img-2.png'
+
 export const LISTSLIDER_DATA = [
     {
-        icon: televisionIcon,
+        icon: TelevisionIcon,
         title: "Televisions"
     },
     {
-        icon: smartWatchIcon,
+        icon: SmartWatchIcon,
         title: "Smartwatch"
     },
     {
-        icon: moniterIcon,
+        icon: MoniterIcon,
         title: "Monitors"
     },
     {
-        icon: gameIcon,
+        icon: GameIcon,
         title: "Game"
     },
     {
-        icon: storageIcon,
+        icon: StorageIcon,
         title: "Storage (SSD)"
     },
     {
-        icon: graphicIcon,
+        icon: GraphicIcon,
         title: "Graphic Card"
     },
     {
-        icon: televisionIcon,
+        icon: TelevisionIcon,
         title: "Televisions"
     },
     {
-        icon: smartWatchIcon,
+        icon: SmartWatchIcon,
         title: "Smartwatch"
     },
     {
-        icon: moniterIcon,
+        icon: MoniterIcon,
         title: "Monitors"
     },
     {
-        icon: gameIcon,
+        icon: GameIcon,
         title: "Game"
     },
     {
-        icon: storageIcon,
+        icon: StorageIcon,
         title: "Storage (SSD)"
     },
     {
-        icon: graphicIcon,
+        icon: GraphicIcon,
         title: "Graphic Card"
     }
 ]
 
 export const SUPPORT_DATA = [
     {
-        icon: deliveryIcon,
+        icon: DeliveryIcon,
         title: "EXPRESS Delivery",
         description: "Order Now"
     },
     {
-        icon: returnIcon,
+        icon: ReturnIcon,
         title: "Easy Return",
         description: "30 days return"
     },
     {
-        icon: supportIcon,
+        icon: SupportIcon,
         title: "24/7 Support",
         description: "Premium Services"
     },
     {
-        icon: premiumIcon,
+        icon: PremiumIcon,
         title: "Premium Warranty",
         description: "Up to 2 years"
     },
     {
-        icon: giftIcon,
+        icon: GiftIcon,
         title: "Best Special Gift",
         description: "For Order"
     }
