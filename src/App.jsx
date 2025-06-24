@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import ListSlider from './components/ListSlider'
 import Product from './components/Product'
 import Support from './components/Support'
+import Testimonials from './components/Testimonials'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <Support />
       <Product />
+      <Testimonials />
     </>
   )
 }

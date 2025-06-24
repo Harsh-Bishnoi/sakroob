@@ -1,5 +1,6 @@
 import { deliveryIcon, gameIcon, giftIcon, graphicIcon, moniterIcon, premiumIcon, returnIcon, smartWatchIcon, storageIcon, supportIcon, televisionIcon } from "./Icons";
-
+import manImg from '../assets/images/png/testimonial-swiper-img-1.png'
+import womanImg from '../assets/images/png/testimonial-swiper-img-2.png'
 export const LISTSLIDER_DATA = [
     {
         icon: televisionIcon,
@@ -76,5 +77,28 @@ export const SUPPORT_DATA = [
         icon: giftIcon,
         title: "Best Special Gift",
         description: "For Order"
+    }
+]
+
+export const TESTMONIAL_DATA = [
+    {
+        img: manImg,
+        title: "William gate",
+        job: "CEO"
+    },
+    {
+        img: womanImg,
+        title: "Darrell Steward",
+        job: "Manager"
+    },
+    {
+        img: manImg,
+        title: "William gate",
+        job: "CEO"
+    },
+    {
+        img: womanImg,
+        title: "Darrell Steward",
+        job: "Manager"
     }
 ]
