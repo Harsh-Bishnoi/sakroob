@@ -12,7 +12,7 @@ const Footer = () => {
                 <div className="max-w-[1440px] mx-auto px-3">
                     <div className="py-10 mt-[-170px]">
                         <a className='mx-auto flex justify-center max-w-max max-sm:max-w-[130px]' href=""> <FooterLogo /></a>
-                        <Description descriptionClass="text-white !font-normal leading-[150%] text-center opacity-80 max-w-[338px] mx-auto mt-4 sm:mt-6 !text-sm sm:!text-base" descriptionText="Commodo egestas etiam arcu curabitur aliquam volutpat a gravida." />
+                        <Description descriptionClass="text-white max-w-[338px] mx-auto mt-4 sm:mt-6 text-center" descriptionText="Commodo egestas etiam arcu curabitur aliquam volutpat a gravida." />
                         <ul className="flex flex-wrap gap-4 sm:gap-6 justify-center pt-4.5 sm:pt-[27px] mx-auto max-sm:max-w-[246px]">
                             {FOOTER_LINKS.map((links, index) => (
                                 <li key={index}>
