@@ -1,8 +1,8 @@
 import React from 'react'
-import { FooterLogo } from '../utils/Icons'
-import Description from './common/Description'
-import { FOOTER_LINKS, SOCIAL_LINKS } from '../utils/helper'
-import SakroobCircle from './SakroobCircle'
+import { FooterLogo } from '../../utils/Icons'
+import Description from './Description'
+import { FOOTER_LINKS, SOCIAL_LINKS } from '../../utils/helper'
+import SakroobCircle from '../SakroobCircle'
 
 const Footer = () => {
     return (

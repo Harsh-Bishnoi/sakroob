@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { CartIcon, DropdownArrow, HeaderLogo, LikeIcon, ProfileIcon, SearchIcon, UserIcon, } from '../utils/Icons';
-import CustomInput from './common/CustomInput';
+import { CartIcon, DropdownArrow, HeaderLogo, LikeIcon, ProfileIcon, SearchIcon, UserIcon, } from '../../utils/Icons';
+import CustomInput from './CustomInput';
 
 const Header = () => {
     const [openDropdown, setOpenDropdown] = useState(null);
