@@ -7,6 +7,7 @@ import fiveToolsImg from '../assets/images/png/five-tools-img.png';
 import fiveToolsMobileImg from '../assets/images/png/five-tools-mobile-img.png';
 import motherboardeImg from '../assets/images/png/motherboard-img.png';
 import playerImg from '../assets/images/png/computer-player-img.png';
+import CustomButton from './common/CustomButton';
 const Blog = () => {
     return (
         <>
@@ -37,6 +38,9 @@ const Blog = () => {
                             <a className='flex items-center leading-[100%] mx-auto font-medium text-[#112D49] mt-6 sm:mt-7 gap-[7px] max-w-max text-center' href="">View Build Log <span><LinkArrowIcon /></span> </a>
                         </div>
                         <img className='max-w-[182px] max-xl:mt-9.5 sm:max-w-[250px] xl:max-w-[300px] 2xl:max-w-[367px] ml-auto' src={playerImg} alt="five tools img" />
+                    </div>
+                    <div className="flex justify-center mt-9.5 sm:mt-14">
+                        <CustomButton btnClass="bg-[#112D49] hover:bg-[#112D49]/80 text-white" btnText="View All Blog Posts" />
                     </div>
                 </div>
             </div>
