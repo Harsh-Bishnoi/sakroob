@@ -12,6 +12,7 @@ import SignUp from './components/SignUp'
 import Support from './components/Support'
 import Testimonials from './components/Testimonials'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Bestsellers from './components/Bestsellers'
 
 function App() {
   const [isSignedUp, setIsSignedUp] = useState(() => {
@@ -51,6 +52,7 @@ function App() {
               <Hero />
               <Support />
               <Product />
+              <Bestsellers />
               <Blog />
               <Testimonials />
             </>

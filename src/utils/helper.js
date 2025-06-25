@@ -1,6 +1,10 @@
-import { DeliveryIcon, FacebookSvg, GameIcon, GiftIcon, GraphicIcon, InstagramSvg, MoniterIcon, PremiumIcon, ReturnIcon, SmartWatchIcon, StorageIcon, SupportIcon, TelevisionIcon, TwitterSvg, YoutubeSvg } from './Icons'
+import { DeliveryIcon, FacebookSvg, GameIcon, GiftIcon, GraphicIcon, HeartIcon, InstagramSvg, MoniterIcon, PremiumIcon, ReturnIcon, ShopIcon, SmartWatchIcon, StorageIcon, SupportIcon, TelevisionIcon, TwitterSvg, YoutubeSvg } from './Icons'
 import manImg from '../assets/images/png/testimonial-swiper-img-1.png'
 import womanImg from '../assets/images/png/testimonial-swiper-img-2.png'
+import gamingPc from '../assets/images/png/gaming-pc-img.png'
+import wirelessRouter from '../assets/images/png/wireless-router-img.png'
+import gamingChair from '../assets/images/png/gaming-chair-img.png'
+import starImg from '../assets/images/png/star-img.png'
 
 export const LISTSLIDER_DATA = [
     {
@@ -130,3 +134,66 @@ export const SOCIAL_LINKS = [
         link: "https://www.youtube.com/"
     },
 ]
+
+export const BESTSELLER_DATA = [
+    {
+        img: gamingPc,
+        title: "Vortex Gaming PC",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: 52350,
+        star: starImg,
+        heart: HeartIcon,
+        shop: ShopIcon,
+        id: 1
+    },
+    {
+        img: wirelessRouter,
+        title: "D-Link ADSL Wireless Router DSL2790U",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: 1456,
+        star: starImg,
+        heart: HeartIcon,
+        shop: ShopIcon,
+        id: 2
+    },
+    {
+        img: gamingChair,
+        title: "Gaming Chair",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: 21456,
+        star: starImg,
+        heart: HeartIcon,
+        shop: ShopIcon,
+        id: 3
+    },
+    {
+        img: gamingPc,
+        title: "Vortex Gaming PC",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: 52350,
+        star: starImg,
+        heart: HeartIcon,
+        shop: ShopIcon,
+        id: 4
+    },
+    {
+        img: wirelessRouter,
+        title: "D-Link ADSL Wireless Router DSL2790U",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: 1456,
+        star: starImg,
+        heart: HeartIcon,
+        shop: ShopIcon,
+        id: 5
+    },
+    {
+        img: gamingChair,
+        title: "Gaming Chair",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: 21456,
+        star: starImg,
+        heart: HeartIcon,
+        shop: ShopIcon,
+        id: 6
+    },
+];
