@@ -42,3 +42,7 @@ body {
     height: 21px !important;
     width: 21px !important;
 }
+
+.hero .slider-wrapper {
+    padding-bottom: 30px !important;
+}

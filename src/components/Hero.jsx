@@ -8,7 +8,7 @@ const Hero = () => {
     const slides = Array(5).fill(0)
 
     return (
-        <div className="flex justify-center items-center px-4 sm:px-6 lg:px-7">
+        <div className="flex justify-center items-center px-4 sm:px-6 lg:px-7 hero">
             <div className="w-full max-w-[1384px] mx-auto">
                 <Carousel
                     showArrows={false}
