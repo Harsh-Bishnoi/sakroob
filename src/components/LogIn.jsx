@@ -5,7 +5,7 @@ import CustomInput from './common/CustomInput';
 import CustomButton from './common/CustomButton';
 import { PasswordEye, ShowPasswordEye } from '../utils/Icons';
 
-const LogIn = () => {
+const LogIn = ({ onLogIn }) => {
     const initialValues = {
         email: "",
         password: "",
@@ -38,11 +38,13 @@ const LogIn = () => {
         console.log("Login successful:", inputValue);
         setInputValue(initialValues);
         setShowPopup(true);
+        onLogIn();
 
         setTimeout(() => {
             setShowPopup(false);
         }, 3000);
     };
+
 
     return (
         <div className="flex min-h-screen justify-center items-center px-4 bg-[url(src/assets/images/png/login-bg-img.png)]">

@@ -5,7 +5,7 @@ import CustomInput from './common/CustomInput';
 import CustomButton from './common/CustomButton';
 import { PasswordEye, ShowPasswordEye } from '../utils/Icons';
 
-const SignUp = () => {
+const SignUp = ({ onSignUp }) => {
     const initialValues = {
         firstName: "",
         lastName: "",
@@ -61,12 +61,17 @@ const SignUp = () => {
         setLastNameError("");
         setEmailError("");
         setPasswordError("");
-        setShowPopup(true);
 
+        setShowPopup(true);
         setTimeout(() => {
             setShowPopup(false);
         }, 3000);
+
+        if (typeof onSignUp === "function") {
+            onSignUp();
+        }
     };
+
 
     return (
         <div className="flex min-h-screen justify-center items-center px-4 bg-[url(src/assets/images/png/login-bg-img.png)]">
