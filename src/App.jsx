@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import ListSlider from './components/ListSlider'
+import LogIn from './components/LogIn'
 import Product from './components/Product'
 import Support from './components/Support'
 import Testimonials from './components/Testimonials'
@@ -22,6 +23,7 @@ function App() {
       <Testimonials />
       <Footer />
       <AddToCart />
+      <LogIn />
     </>
   )
 }
