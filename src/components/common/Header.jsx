@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CartIcon, DropdownArrow, HeaderLogo, LikeIcon, ProfileIcon, SearchIcon, UserIcon, } from '../../utils/Icons';
 import CustomInput from './CustomInput';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     const [openDropdown, setOpenDropdown] = useState(null);
@@ -46,16 +47,16 @@ const Header = () => {
             <div className="bg-[#112D49] ">
                 <div className="relative z-20 max-w-[1440px] mx-auto">
                     <div className="mx-auto py-[13px] lg:py-5 lg:hidden px-6 max-w-[1246px] flex items-center justify-between">
-                        <div className="header-logo">
+                        <NavLink to="/" className="header-logo">
                             <HeaderLogo />
-                        </div>
+                        </NavLink>
                         <div onClick={toggleNavbar} className="z-50 lg:hidden flex flex-col justify-between w-6 h-5 cursor-pointer">
                             <span className={`block h-1 rounded-3xl bg-white transition-transform duration-300 ease-in-out ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
                             <span className={`block h-1 rounded-3xl bg-white transition-transform duration-300 ease-in-out ${menuOpen ? 'opacity-0' : ''}`}></span>
                             <span className={`block h-1 rounded-3xl bg-white transition-transform duration-300 ease-in-out ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
                         </div>
                     </div>
-                    <div className="absolute ml-auto left-[10px] xl:left-[94px] max-lg:hidden max-w-[40px] top-[31px]">  <HeaderLogo /> </div>
+                    <NavLink to="/" className="absolute ml-auto left-[10px] xl:left-[94px] max-lg:hidden max-w-[40px] top-[31px]">  <HeaderLogo /> </NavLink>
                     <ul id='nav-name' className={`list-none flex justify-center items-center lg:max-w-[974px] ml-auto xl:mr-[100px] nav-link ${menuOpen ? "show-navbar" : "hidden lg:flex"}`}  >
                         <li>
                             <ul className='list-unstyled flex items-center max-lg:flex-col max-lg:text-center gap-4 xl::gap-8 relative py-5'>
@@ -112,7 +113,7 @@ const Header = () => {
                                             <div className="h-10 border border-[#D9D9D9] w-0"></div>
                                             <a onClick={linkClick} href=""><LikeIcon /></a>
                                             <div className="h-10 border border-[#D9D9D9] w-0"></div>
-                                            <a onClick={linkClick} href=""><CartIcon /></a>
+                                            <NavLink onClick={linkClick} to="/addToCart"><CartIcon /></NavLink>
                                         </div>
                                         <a className='min-w-10 h-10 rounded-full flex cursor-pointer items-end justify-center overflow-hidden bg-white' onClick={linkClick} href=""><ProfileIcon /></a>
                                     </div>

@@ -84,7 +84,7 @@ const AddToCart = () => {
                                                     <div className="flex items-center">
                                                         <button
                                                             onClick={() => decrement(item.id)}
-                                                            className="w-[44px] h-[40px] flex items-center justify-center bg-[#73A4E0] hover:bg-[#73A4E0]/60 text-white rounded-l"
+                                                            className="w-[44px] h-[40px] cursor-pointer flex items-center justify-center bg-[#73A4E0] hover:bg-[#73A4E0]/60 text-white rounded-l"
                                                         >
                                                             <ReduceIcon />
                                                         </button>
@@ -93,7 +93,7 @@ const AddToCart = () => {
                                                         </div>
                                                         <button
                                                             onClick={() => increment(item.id)}
-                                                            className="w-[44px] h-[40px] flex items-center justify-center bg-[#112D49] hover:bg-[#112D49]/60 text-white rounded-r"
+                                                            className="w-[44px] h-[40px] cursor-pointer flex items-center justify-center bg-[#112D49] hover:bg-[#112D49]/60 text-white rounded-r"
                                                         >
                                                             <IncreaseIcon />
                                                         </button>

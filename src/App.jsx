@@ -11,6 +11,7 @@ import Product from './components/Product'
 import SignUp from './components/SignUp'
 import Support from './components/Support'
 import Testimonials from './components/Testimonials'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
   const [isSignedUp, setIsSignedUp] = useState(() => {
@@ -41,15 +42,24 @@ function App() {
 
   return (
     <>
-      <Header />
-      <ListSlider />
-      <Hero />
-      <Support />
-      <Product />
-      <Blog />
-      <Testimonials />
-      <Footer />
-      <AddToCart />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <ListSlider />
+              <Hero />
+              <Support />
+              <Product />
+              <Blog />
+              <Testimonials />
+            </>
+          } />
+          <Route path="/addToCart" element={<AddToCart />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+
     </>
   )
 }
