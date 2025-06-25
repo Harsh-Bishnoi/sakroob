@@ -22,9 +22,7 @@ const Hero = () => {
                             <h1 className="font-bold max-w-[264px] sm:max-w-[761px] mx-auto text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[120%] text-center pb-2 sm:pb-3 pt-[122px] sm:pt-[200px] md:pt-[220px] lg:pt-[237px] text-[#112D49]">
                                 Where Tinkerers Bring Ideas Alive
                             </h1>
-                            <Description descriptionClass="font-normal max-w-[460px] mx-auto !text-sm sm:!text-base leading-[150%]"
-                                descriptionText="Explore niche tech gear, DIY kits, and pro tools — built for creators, gamers, and engineers."
-                            />
+                            <Description descriptionClass="max-w-[460px] mx-auto" descriptionText="Explore niche tech gear, DIY kits, and pro tools — built for creators, gamers, and engineers." />
                             <div className="flex justify-center items-center gap-3 mt-6 sm:gap-4.5 sm:mt-8.5">
                                 <CustomButton
                                     btnClass="bg-[#112D49] max-sm:!text-sm text-white hover:bg-[#112D49]/80"
