@@ -54,6 +54,7 @@ const SignUp = () => {
         if (!validateForm()) return;
 
         console.log("Form submitted:", inputValue);
+        localStorage.setItem('signupData', JSON.stringify(inputValue));
 
         setInputValue(initialValues);
         setFirstNameError("");

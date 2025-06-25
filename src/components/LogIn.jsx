@@ -15,34 +15,30 @@ const LogIn = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [emailError, setEmailError] = useState("");
     const [passwordError, setPasswordError] = useState("");
-    const [showPopup, setShowPopup] = useState(false); // ✅ Popup state
-
-    const validateEmail = (email) =>
-        /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.com$/.test(email);
-
-    const validatePassword = (password) =>
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,}$/.test(password);
+    const [showPopup, setShowPopup] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const isEmailValid = validateEmail(inputValue.email);
-        const isPasswordValid = validatePassword(inputValue.password);
+        const savedData = JSON.parse(localStorage.getItem("signupData"));
 
-        setEmailError(isEmailValid ? "" : "Please enter a valid email address.");
-        setPasswordError(
-            isPasswordValid
-                ? ""
-                : "Password must be at least 8 characters and include uppercase, lowercase, number, and special character."
-        );
+        if (!savedData) {
+            setEmailError("No user found. Please sign up first.");
+            return;
+        }
 
-        if (!isEmailValid || !isPasswordValid) return;
+        const isEmailMatch = inputValue.email === savedData.email;
+        const isPasswordMatch = inputValue.password === savedData.password;
 
-        console.log("Form submitted:", inputValue);
+        setEmailError(isEmailMatch ? "" : "Email does not match.");
+        setPasswordError(isPasswordMatch ? "" : "Password does not match.");
+
+        if (!isEmailMatch || !isPasswordMatch) return;
+
+        console.log("Login successful:", inputValue);
         setInputValue(initialValues);
-        setShowPopup(true); // ✅ Show popup
+        setShowPopup(true);
 
-        // ✅ Auto-hide after 3 seconds
         setTimeout(() => {
             setShowPopup(false);
         }, 3000);
@@ -95,10 +91,7 @@ const LogIn = () => {
                         )}
 
                         <div className="text-end">
-                            <a
-                                className="font-medium leading-[100%] underline text-[#112D49] hover:text-red-400 transition-all duration-200 ease-linear"
-                                href="#"
-                            >
+                            <a className="font-medium leading-[100%] underline text-[#112D49] hover:text-red-400" href="#">
                                 Forgot password?
                             </a>
                         </div>
@@ -117,7 +110,7 @@ const LogIn = () => {
                             </span>
                         </p>
                         <div className="mx-auto text-center sm:hidden">
-                            <a className="underline font-semibold hover:text-red-400 transition-all duration-200 ease-linear" href="#" >
+                            <a className="underline font-semibold hover:text-red-400" href="#">
                                 Create account
                             </a>
                         </div>
