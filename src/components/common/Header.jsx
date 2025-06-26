@@ -60,8 +60,8 @@ const Header = () => {
                     <ul id='nav-name' className={`list-none flex justify-center items-center lg:max-w-[974px] ml-auto xl:mr-[100px] nav-link ${menuOpen ? "show-navbar" : "hidden lg:flex"}`}  >
                         <li>
                             <ul className='list-unstyled flex items-center max-lg:flex-col max-lg:text-center gap-4 xl::gap-8 relative py-5'>
-                                <li><a onClick={linkClick} className='leading-[150%] text-white' href="#">Categories</a></li>
-                                <li className="relative">
+                                <li className='relative after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:w-0 after:bg-white after:rounded hover:after:w-full after:duration-300 after:ease-linear after:transition-all'><a onClick={linkClick} className='leading-[150%] text-white' href="#">Categories</a></li>
+                                <li className="relative after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:w-0 after:bg-white after:rounded hover:after:w-full after:duration-300 after:ease-linear after:transition-all ">
                                     <button type="button" className='leading-[150%] text-white flex items-center gap-2 dropdown-toggle' onClick={() => toggleDropdown("pcProducts")}>
                                         PC Products <DropdownArrow />
                                     </button>
@@ -75,7 +75,7 @@ const Header = () => {
                                         </div>
                                     )}
                                 </li>
-                                <li className="relative">
+                                <li className="relative after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:w-0 after:bg-white after:rounded hover:after:w-full after:duration-300 after:ease-linear after:transition-all">
                                     <button type="button" className='leading-[150%] text-white flex items-center gap-2 dropdown-toggle' onClick={() => toggleDropdown("services")}>
                                         Services <DropdownArrow />
                                     </button>
@@ -87,7 +87,7 @@ const Header = () => {
                                         </div>
                                     )}
                                 </li>
-                                <li className="relative">
+                                <li className="relative after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:w-0 after:bg-white after:rounded hover:after:w-full after:duration-300 after:ease-linear after:transition-all">
                                     <button type="button" className='leading-[150%] text-white flex items-center gap-2 dropdown-toggle' onClick={() => toggleDropdown("support")}>
                                         Support <DropdownArrow />
                                     </button>
@@ -103,9 +103,9 @@ const Header = () => {
                                         </div>
                                     )}
                                 </li>
-                                <li><a onClick={linkClick} className='leading-[150%] text-white' href="#">About</a></li>
-                                <li><a onClick={linkClick} className='leading-[150%] text-white' href="#">Blog</a></li>
-                                <li><a onClick={linkClick} className='leading-[150%] text-white' href="#">Contact</a></li>
+                                <li className='relative after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:w-0 after:bg-white after:rounded hover:after:w-full after:duration-300 after:ease-linear after:transition-all'><a onClick={linkClick} className='leading-[150%] text-white' href="#">About</a></li>
+                                <li className='relative after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:w-0 after:bg-white after:rounded hover:after:w-full after:duration-300 after:ease-linear after:transition-all'><a onClick={linkClick} className='leading-[150%] text-white' href="#">Blog</a></li>
+                                <li className='relative after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:w-0 after:bg-white after:rounded hover:after:w-full after:duration-300 after:ease-linear after:transition-all'><a onClick={linkClick} className='leading-[150%] text-white' href="#">Contact</a></li>
                                 <li>
                                     <div className="flex items-center gap-9 w-full max-w-[285px]">
                                         <div className="flex gap-3.5 items-center">
