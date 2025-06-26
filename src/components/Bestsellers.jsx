@@ -8,11 +8,11 @@ import CustomButton from "./common/CustomButton";
 import { BESTSELLER_DATA } from "../utils/helper";
 import Heading from "./common/Heading";
 import { useNavigate } from "react-router-dom";
-import { useCart } from "../context/CartContext"; // ✅ Added
+import { useCart } from "../context/CartContext";
 
 const BestSellers = () => {
     const navigate = useNavigate();
-    const { addToCart } = useCart(); // ✅ Using context
+    const { addToCart } = useCart();
 
     const handleShopNowClick = () => {
         navigate("/productdetail");
@@ -53,7 +53,7 @@ const BestSellers = () => {
 
     const handleAddToCart = (item) => {
         const newItem = { ...item, quantity: 1 };
-        addToCart(newItem); // ✅ Updated
+        addToCart(newItem);
 
         setPopupMessage("Added to cart 🛒");
         setShowPopup(true);

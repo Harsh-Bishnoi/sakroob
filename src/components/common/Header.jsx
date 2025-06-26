@@ -50,14 +50,16 @@ const Header = () => {
                         <NavLink to="/" className="header-logo">
                             <HeaderLogo />
                         </NavLink>
-                        <div onClick={toggleNavbar} className="z-50 lg:hidden flex flex-col justify-between w-6 h-5 cursor-pointer">
-                            <span className={`block h-1 rounded-3xl bg-white transition-transform duration-300 ease-in-out ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                            <span className={`block h-1 rounded-3xl bg-white transition-transform duration-300 ease-in-out ${menuOpen ? 'opacity-0' : ''}`}></span>
-                            <span className={`block h-1 rounded-3xl bg-white transition-transform duration-300 ease-in-out ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+                        <div className="size-[30px]">
+                            <div onClick={toggleNavbar} className="max-w-[18px] z-50 relative cursor-pointer lg:hidden flex flex-col justify-center gap-[5px]">
+                                <span className={`rounded-3xl bg-white transition-transform duration-300 ease-in-out ${menuOpen ? 'rotate-45 translate-y-2 h-1' : 'w-[9.77px] h-[1px] ml-auto'}`}></span>
+                                <span className={`rounded-3xl mx-auto bg-white transition-transform duration-300 ease-in-out ${menuOpen ? 'opacity-0 h-1' : 'w-[18px] h-[1px] '}`}></span>
+                                <span className={`rounded-3xl bg-white transition-transform duration-300 ease-in-out ${menuOpen ? '-rotate-45 -translate-y-2.5 h-1' : ' w-[9.77px] h-[1px] '}`}></span>
+                            </div>
                         </div>
                     </div>
                     <NavLink to="/" className="absolute ml-auto left-[10px] xl:left-[94px] max-lg:hidden max-w-[40px] top-[31px]">  <HeaderLogo /> </NavLink>
-                    <ul id='nav-name' className={`list-none flex justify-center items-center lg:max-w-[974px] ml-auto xl:mr-[100px] nav-link ${menuOpen ? "show-navbar" : "hidden lg:flex"}`}  >
+                    <ul id='nav-name' className={`list-none flex justify-center items-center lg:max-w-[974px] ml-auto xl:mr-[100px] nav-link ${menuOpen ? "show-navbar" : ""}`}  >
                         <li>
                             <ul className='list-unstyled flex items-center max-lg:flex-col max-lg:text-center gap-4 xl::gap-8 relative py-5'>
                                 <li className='relative after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:w-0 after:bg-white after:rounded hover:after:w-full after:duration-300 after:ease-linear after:transition-all'><a onClick={linkClick} className='leading-[150%] text-white' href="#">Categories</a></li>
@@ -109,13 +111,13 @@ const Header = () => {
                                 <li>
                                     <div className="flex items-center gap-9 w-full max-w-[285px]">
                                         <div className="flex gap-3.5 items-center">
-                                            <a onClick={linkClick} href=""><UserIcon /></a>
+                                            <a onClick={linkClick} href="/"><UserIcon /></a>
                                             <div className="h-10 border border-[#D9D9D9] w-0"></div>
-                                            <a onClick={linkClick} href=""><LikeIcon /></a>
+                                            <a onClick={linkClick} href="/"><LikeIcon /></a>
                                             <div className="h-10 border border-[#D9D9D9] w-0"></div>
                                             <NavLink onClick={linkClick} to="/addToCart"><CartIcon /></NavLink>
                                         </div>
-                                        <a className='min-w-10 h-10 rounded-full flex cursor-pointer items-end justify-center overflow-hidden bg-white' onClick={linkClick} href=""><ProfileIcon /></a>
+                                        <a className='min-w-10 h-10 rounded-full flex cursor-pointer items-end justify-center overflow-hidden bg-white' onClick={linkClick} href="/"><ProfileIcon /></a>
                                     </div>
                                 </li>
                             </ul>

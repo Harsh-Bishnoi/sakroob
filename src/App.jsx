@@ -16,14 +16,10 @@ import Testimonials from './components/Testimonials';
 import Bestsellers from './components/Bestsellers';
 import CheckOut from './components/CheckOut';
 import ProductDetail from './components/ProductDetail';
-import { CartProvider } from './context/CartContext'; // ✅ Add this
+import { CartProvider } from './context/CartContext';
 import BackToTop from './components/common/BackToTop';
 
 function App() {
-  const [isSignedUp, setIsSignedUp] = useState(() => {
-    return localStorage.getItem('isSignedUp') === 'true';
-  });
-
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
     return localStorage.getItem('isLoggedIn') === 'true';
   });
@@ -38,11 +34,6 @@ function App() {
       }
     }, [isLoggedIn, navigate]);
 
-    const handleSignUp = () => {
-      setIsSignedUp(true);
-      localStorage.setItem('isSignedUp', 'true');
-    };
-
     const handleLogIn = () => {
       setIsLoggedIn(true);
       localStorage.setItem('isLoggedIn', 'true');
@@ -53,7 +44,7 @@ function App() {
       <>
         {isLoggedIn && <Header />}
         <Routes>
-          <Route path="/signup" element={<SignUp onSignUp={handleSignUp} />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<LogIn onLogIn={handleLogIn} />} />
           <Route
             path="/"
