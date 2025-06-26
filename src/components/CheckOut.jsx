@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AmericanCard, InformationIcon, MasterCard, Paypal, VisaCard, } from "../utils/Icons";
 import CustomButton from "./common/CustomButton";
+import CustomInput from "./common/CustomInput";
 
 const CheckOut = () => {
     const [checked, setChecked] = useState(false);
@@ -133,8 +134,6 @@ const CheckOut = () => {
                                     Save this information for next time
                                 </p>
                             </div>
-
-                            {/* Shipping Method */}
                             <p className="text-lg leading-[150%] text-[#112D49] pt-[42px]">
                                 Shipping method
                             </p>
@@ -148,8 +147,6 @@ const CheckOut = () => {
                                     AED 20.00
                                 </p>
                             </div>
-
-                            {/* Payment */}
                             <p className="font-bold text-2xl leading-[120%] text-[#112D49] pt-[42px]">
                                 Payment
                             </p>
@@ -158,7 +155,6 @@ const CheckOut = () => {
                             </p>
 
                             <div className="border border-[#E8EBED] py-[20px] px-[28px] mt-[20px]">
-                                {/* PayPal */}
                                 <div className="flex justify-between flex-wrap">
                                     <div className="flex gap-[8px] items-center">
                                         <label className="inline-flex items-center cursor-pointer">
@@ -190,7 +186,6 @@ const CheckOut = () => {
                                     </div>
                                 </div>
 
-                                {/* Credit/Debit Card */}
                                 <div className="flex gap-[8px] items-center pt-[34px]">
                                     <label className="inline-flex items-center cursor-pointer">
                                         <input
@@ -224,21 +219,13 @@ const CheckOut = () => {
                                                 <p className="font-bold text-lg text-[#112D49] pt-[35px]">
                                                     Card Number
                                                 </p>
-                                                <input
-                                                    type="number"
-                                                    placeholder="1234 5678 9012 3456"
-                                                    className="bg-[#F4F8F7] rounded-[12px] px-3 h-[52px] w-full mt-[14px]"
-                                                />
+                                                <CustomInput type="number" placeholder="1234 5678 9012 3456" inputClass="!bg-[#F4F8F7] !border-none !rounded-[12px] px-3 h-[52px] w-full mt-[14px]" />
                                             </div>
                                             <div className="w-full">
                                                 <p className="font-bold text-lg text-[#112D49] pt-[35px]">
                                                     Name on Card
                                                 </p>
-                                                <input
-                                                    type="text"
-                                                    placeholder="Full Name"
-                                                    className="bg-[#F4F8F7] rounded-[12px] px-3 h-[52px] w-full mt-[14px]"
-                                                />
+                                                <CustomInput type="text" placeholder="Full Name" inputClass="!bg-[#F4F8F7] !border-none !rounded-[12px] px-3 h-[52px] w-full mt-[14px]" />
                                             </div>
                                         </div>
                                         <div className="flex flex-col md:flex-row justify-between gap-[28px]">
@@ -246,27 +233,18 @@ const CheckOut = () => {
                                                 <p className="font-bold text-lg text-[#112D49] pt-[35px]">
                                                     Expire Date
                                                 </p>
-                                                <input
-                                                    type="text"
-                                                    placeholder="MM/YY"
-                                                    className="bg-[#F4F8F7] rounded-[12px] px-3 h-[52px] w-full mt-[14px]"
-                                                />
+                                                <CustomInput type="number" placeholder="MM/YY" inputClass="!bg-[#F4F8F7] !border-none !rounded-[12px] px-3 h-[52px] w-full mt-[14px]" />
                                             </div>
                                             <div className="w-full">
                                                 <p className="font-bold text-lg text-[#112D49] pt-[35px]">
                                                     CVC
                                                 </p>
-                                                <input
-                                                    type="text"
-                                                    placeholder="123"
-                                                    className="bg-[#F4F8F7] px-3 rounded-[12px] h-[52px] w-full mt-[14px]"
-                                                />
+                                                <CustomInput type="number" placeholder="123" inputClass="!bg-[#F4F8F7] !border-none !rounded-[12px] px-3 h-[52px] w-full mt-[14px]" />
                                             </div>
                                         </div>
                                     </>
                                 )}
 
-                                {/* Bank Transfer */}
                                 <div className="flex items-center gap-[8px] mt-[48px]">
                                     <label className="inline-flex items-center cursor-pointer">
                                         <input
