@@ -4,6 +4,7 @@ import Description from './common/Description';
 import CustomInput from './common/CustomInput';
 import CustomButton from './common/CustomButton';
 import { PasswordEye, ShowPasswordEye } from '../utils/Icons';
+import { NavLink } from 'react-router-dom';
 
 const LogIn = ({ onLogIn }) => {
     const initialValues = {
@@ -106,15 +107,15 @@ const LogIn = ({ onLogIn }) => {
                         <p className="text-[#112D49] leading-[150%] mt-5 text-center">
                             Don’t have an account?
                             <span className="max-sm:hidden">
-                                <a className="underline hover:text-red-400 transition-all duration-200 ease-linear font-semibold" href="#" >
+                                <NavLink className="underline hover:text-red-400 transition-all duration-200 ease-linear font-semibold" to="/signup">
                                     {" "}Create account
-                                </a>
+                                </NavLink>
                             </span>
                         </p>
                         <div className="mx-auto text-center sm:hidden">
-                            <a className="underline font-semibold hover:text-red-400" href="#">
+                            <NavLink className="underline font-semibold hover:text-red-400" to="/signup">
                                 Create account
-                            </a>
+                            </NavLink>
                         </div>
                     </div>
                 </form>

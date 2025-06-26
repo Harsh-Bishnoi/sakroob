@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ Imported for redirect
 import Heading from './common/Heading';
 import Description from './common/Description';
 import CustomInput from './common/CustomInput';
 import CustomButton from './common/CustomButton';
 import { PasswordEye, ShowPasswordEye } from '../utils/Icons';
+import { NavLink } from 'react-router-dom';
 
 const SignUp = ({ onSignUp }) => {
+    const navigate = useNavigate(); // ✅ For redirect after signup
+
     const initialValues = {
         firstName: "",
         lastName: "",
@@ -53,7 +57,13 @@ const SignUp = ({ onSignUp }) => {
 
         if (!validateForm()) return;
 
-        console.log("Form submitted:", inputValue);
+        const savedData = JSON.parse(localStorage.getItem("signupData"));
+
+        if (savedData && savedData.email === inputValue.email) {
+            setEmailError("An account with this email already exists. Please log in.");
+            return;
+        }
+
         localStorage.setItem('signupData', JSON.stringify(inputValue));
 
         setInputValue(initialValues);
@@ -65,13 +75,13 @@ const SignUp = ({ onSignUp }) => {
         setShowPopup(true);
         setTimeout(() => {
             setShowPopup(false);
+            navigate('/login');
         }, 3000);
 
         if (typeof onSignUp === "function") {
             onSignUp();
         }
     };
-
 
     return (
         <div className="flex min-h-screen justify-center items-center px-4 bg-[url(src/assets/images/png/login-bg-img.png)]">
@@ -161,9 +171,9 @@ const SignUp = ({ onSignUp }) => {
                         <p className="text-[#112D49] leading-[150%] mt-5 text-center">
                             Already a member?
                             <span>
-                                <a className="underline hover:text-red-400 transition-all duration-200 ease-linear font-semibold" href="#">
+                                <NavLink className="underline hover:text-red-400 transition-all duration-200 ease-linear font-semibold" to="/login" >
                                     {" "}Log in
-                                </a>
+                                </NavLink>
                             </span>
                         </p>
                     </div>
