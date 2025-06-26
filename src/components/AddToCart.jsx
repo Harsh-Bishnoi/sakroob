@@ -1,7 +1,6 @@
 import React from 'react';
 import Heading from './common/Heading';
 import { NavLink, useNavigate } from 'react-router-dom';
-// import productImage from '../assets/images/png/product.png';
 import CustomButton from '../components/common/CustomButton';
 import { useCart } from '../context/CartContext';
 import { DeleteIcon, IncreaseIcon, ReduceIcon } from '../utils/Icon';
@@ -27,7 +26,7 @@ const AddToCart = () => {
                 {cartItems.length > 0 ? (
                     <div className="mt-13 w-full rounded-xl bg-[#F4F8F7]">
                         <div className="max-xl:overflow-x-scroll">
-                            <table className="w-full text-left whitespace-nowrap">
+                            <table className="w-full text-left">
                                 <thead className='bg-[#F5F5F5] border-b border-[#112D491A]'>
                                     <tr>
                                         <th className='w-[451px] pl-5 font-medium text-lg text-[#112D49] py-[18.5px]'>Product</th>
@@ -38,15 +37,15 @@ const AddToCart = () => {
                                 <tbody>
                                     {cartItems.map(item => (
                                         <tr key={item.id}>
-                                            <td className="flex items-center gap-4 px-5 w-[451px] pt-[47px]">
+                                            <td className="flex items-center gap-5 px-5 w-[451px] pt-[47px]">
                                                 <div className="min-w-[85px] min-h-[85px] border rounded-[7px] relative flex items-center justify-center">
-                                                    <img src={item.image} alt="product" className="object-fit rounded" />
+                                                    <img src={item.img} alt="product" className="object-fit rounded max-w-[50px] max-h-[72px]" />
                                                     <div className="size-[34.24px] left-[68.47px] -top-4 bg-[#C7C7C7] rounded-full flex items-center justify-center text-[#112D49] absolute">
                                                         {item.quantity}
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <h4 className="font-medium text-xl text-[#112D49]">{item.name}</h4>
+                                                    <h4 className="font-medium text-xl text-[#112D49] max-w-[300px]">{item.title}</h4>
                                                     <p className="text-sm text-[#112D49] opacity-50">₹ {item.price.toFixed(2)}</p>
                                                 </div>
                                             </td>

@@ -25,6 +25,18 @@ const Support = () => {
                                 </div>
                             </div>
                             {index !== SUPPORT_DATA.length - 1 && (
+                                <div
+                                    className="max-sm:hidden h-full rotate-180 left-[105%] top-[0%] absolute"
+                                    style={{
+                                        borderWidth: "1px",
+                                        borderStyle: "solid",
+                                        borderImage:
+                                            "linear-gradient(180deg, rgba(17,45,73,0) 0%, #112D49 51.44%, rgba(17,45,73,0) 100%) 1",
+                                    }}
+                                ></div>
+                            )}
+
+                            {index !== SUPPORT_DATA.length - 1 && (
                                 <div className="relative sm:hidden vertical-gradient h-[1px] w-full" />
                             )}
                         </div>

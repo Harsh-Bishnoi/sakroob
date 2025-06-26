@@ -1,12 +1,8 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-
 const CartContext = createContext();
-
-// Custom hook to access cart
 export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
-    // Initial state loaded from localStorage
     const [cartItems, setCartItems] = useState(() => {
         try {
             const savedCart = localStorage.getItem('cartItems');
@@ -16,8 +12,6 @@ export const CartProvider = ({ children }) => {
             return [];
         }
     });
-
-    // Sync cart to localStorage whenever cartItems change
     useEffect(() => {
         try {
             localStorage.setItem('cartItems', JSON.stringify(cartItems));
@@ -25,8 +19,6 @@ export const CartProvider = ({ children }) => {
             console.error("Error saving cart to localStorage:", error);
         }
     }, [cartItems]);
-
-    // Add new product or increase quantity if already exists
     const addToCart = (product) => {
         setCartItems(prevItems => {
             const existingItem = prevItems.find(item => item.id === product.id);
@@ -41,8 +33,6 @@ export const CartProvider = ({ children }) => {
             }
         });
     };
-
-    // Increase quantity
     const increment = (id) => {
         setCartItems(prevItems =>
             prevItems.map(item =>
@@ -50,8 +40,6 @@ export const CartProvider = ({ children }) => {
             )
         );
     };
-
-    // Decrease quantity but not below 1
     const decrement = (id) => {
         setCartItems(prevItems =>
             prevItems.map(item =>
@@ -61,8 +49,6 @@ export const CartProvider = ({ children }) => {
             )
         );
     };
-
-    // Remove item from cart
     const removeFromCart = (id) => {
         setCartItems(prevItems => prevItems.filter(item => item.id !== id));
     };
