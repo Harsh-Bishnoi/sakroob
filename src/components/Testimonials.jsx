@@ -5,7 +5,7 @@ import 'swiper/css';
 import { Navigation } from 'swiper/modules';
 import { TESTMONIAL_DATA } from '../utils/helper';
 import starImg from '../assets/images/png/star-img.png';
-import { LeftArrow, LeftQuotationIcon, RightArrow, RightQuotationIcon } from '../utils/Icons';
+import { LeftArrow, LeftQuotationIcon, RightArrow, RightQuotationIcon } from '../utils/icons';
 
 const Testimonials = () => {
     return (

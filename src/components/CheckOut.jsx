@@ -5,7 +5,7 @@ import {
     MasterCard,
     Paypal,
     VisaCard,
-} from "../utils/Icons";
+} from "../utils/icons";
 import CustomButton from "./common/CustomButton";
 
 const CheckOut = () => {

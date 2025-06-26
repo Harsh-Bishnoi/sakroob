@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // ✅ Imported for redirect
+import { useNavigate } from 'react-router-dom';
 import Heading from './common/Heading';
 import Description from './common/Description';
 import CustomInput from './common/CustomInput';
 import CustomButton from './common/CustomButton';
-import { PasswordEye, ShowPasswordEye } from '../utils/Icons';
+import { PasswordEye, ShowPasswordEye } from '../utils/icons';
 import { NavLink } from 'react-router-dom';
 
 const SignUp = ({ onSignUp }) => {
-    const navigate = useNavigate(); // ✅ For redirect after signup
+    const navigate = useNavigate();
 
     const initialValues = {
         firstName: "",

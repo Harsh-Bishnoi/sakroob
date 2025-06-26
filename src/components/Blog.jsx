@@ -1,6 +1,6 @@
 import React from 'react';
 import Heading from '../components/common/Heading';
-import { LinkArrowIcon } from '../utils/Icons';
+import { LinkArrowIcon } from '../utils/icons';
 import storageImg from '../assets/images/png/storage-system-img.png';
 import fiveToolsImg from '../assets/images/png/five-tools-img.png';
 import fiveToolsMobileImg from '../assets/images/png/five-tools-mobile-img.png';

@@ -4,7 +4,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import CustomButton from "./common/CustomButton";
-import { FilledHeart, HeartIcon, LeftArrow, RightArrow } from "../utils/Icons";
+import { FilledHeart, HeartIcon, LeftArrow, RightArrow } from "../utils/icons";
 import { BESTSELLER_DATA } from "../utils/helper";
 import Heading from "./common/Heading";
 import { useNavigate } from 'react-router-dom';
