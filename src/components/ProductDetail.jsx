@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Heading from "./common/Heading";
-import { ReduceIcon, IncreaseIcon } from "../utils/Icon";
+import { ReduceIcon, IncreaseIcon, RatingIcon } from "../utils/Icon";
 import CustomButton from "./common/CustomButton";
 
 const ProductDetail = () => {
@@ -64,7 +64,6 @@ const ProductDetail = () => {
         <div className="pt-[91px]">
             <div className="max-w-[1140px] mx-auto px-3">
                 <div className="flex flex-wrap flex-row -mx-3">
-                    {/* LEFT SECTION */}
                     <div className="w-full lg:w-6/12 px-3 mb-8 lg:mb-0">
                         <div
                             className="py-[44px] px-[42px] max-w-[517px] rounded-[8px] mx-auto"
@@ -105,7 +104,7 @@ const ProductDetail = () => {
                             headingText={`₹ ${Number(price).toFixed(2)}`}
                         />
                         <div className="pt-4 max-w-[568px] mx-auto lg:mx-0">
-                            {/* <Rating /> */}
+                            <RatingIcon />
                         </div>
                         <div className="flex flex-col items-start gap-4 max-w-[568px] mx-auto lg:mx-0">
                             <Para paraText="Select Color" paraClass="!font-semibold pt-[24px]" />
@@ -114,8 +113,8 @@ const ProductDetail = () => {
                                     <div
                                         key={index}
                                         onClick={() => setSelectedColor(color)}
-                                        className={`w-[29px] h-[29px] rounded-full flex items-center justify-center cursor-pointer border  
-                    ${color === "#FFFFFF" ? "shadow" : ""} 
+                                        className={`w-[29px] h-[29px] rounded-full flex items-center justify-center cursor-pointer border
+                    ${color === "#FFFFFF" ? "shadow" : ""}
                     ${selectedColor === color ? "border-gray-400" : "border-transparent"}`}
                                         style={{ backgroundColor: color }}
                                     >
@@ -156,8 +155,6 @@ const ProductDetail = () => {
                                     <IncreaseIcon />
                                 </button>
                             </div>
-
-                            {/* BUTTONS */}
                             <div className="pt-[78px] w-full">
                                 <CustomButton
                                     buttonClass="!w-full !py-[17px]"
