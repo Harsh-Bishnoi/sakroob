@@ -13,7 +13,7 @@ const BestSellers = () => {
     const navigate = useNavigate();
 
     const handleShopNowClick = () => {
-        navigate("/checkout");
+        navigate("/productdetail");
     };
 
     const [favoriteItems, setFavoriteItems] = useState(() => {

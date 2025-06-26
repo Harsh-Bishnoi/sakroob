@@ -15,6 +15,8 @@ import Support from './components/Support';
 import Testimonials from './components/Testimonials';
 import Bestsellers from './components/Bestsellers';
 import CheckOut from './components/CheckOut';
+import ProductDetail from './components/ProductDetail';
+// import ProductDetail from './components/ProductDetail';
 
 function App() {
   const [isSignedUp, setIsSignedUp] = useState(() => {
@@ -63,6 +65,7 @@ function App() {
                   <Bestsellers />
                   <Blog />
                   <Testimonials />
+                  <CheckOut />
                 </>
               ) : (
                 <LogIn onLogIn={handleLogIn} />
@@ -70,8 +73,8 @@ function App() {
             }
           />
           <Route
-            path="/checkout"
-            element={isLoggedIn ? <CheckOut /> : <LogIn onLogIn={handleLogIn} />}
+            path="/productdetail"
+            element={isLoggedIn ? <ProductDetail /> : <LogIn onLogIn={handleLogIn} />}
           />
 
           <Route
