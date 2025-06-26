@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import CustomButton from "./common/CustomButton";
 import { FilledHeart, HeartIcon, LeftArrow, RightArrow } from "../utils/icons";
+import CustomButton from "./common/CustomButton";
 import { BESTSELLER_DATA } from "../utils/helper";
 import Heading from "./common/Heading";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../context/CartContext"; // ✅ Added
 
 const BestSellers = () => {
     const navigate = useNavigate();
+    const { addToCart } = useCart(); // ✅ Using context
 
     const handleShopNowClick = () => {
         navigate("/productdetail");
@@ -45,9 +47,17 @@ const BestSellers = () => {
 
             showFavoritePopup(message);
             localStorage.setItem("favoriteItems", JSON.stringify(updatedFavorites));
-
             return updatedFavorites;
         });
+    };
+
+    const handleAddToCart = (item) => {
+        const newItem = { ...item, quantity: 1 };
+        addToCart(newItem); // ✅ Updated
+
+        setPopupMessage("Added to cart 🛒");
+        setShowPopup(true);
+        setTimeout(() => setShowPopup(false), 2000);
     };
 
     const topPositionimg = [
@@ -82,30 +92,12 @@ const BestSellers = () => {
                             prevEl: ".prev-buttonBestSellers",
                         }}
                         breakpoints={{
-                            320: {
-                                slidesPerView: 1.1,
-                                spaceBetween: 10,
-                            },
-                            480: {
-                                slidesPerView: 1.3,
-                                spaceBetween: 12,
-                            },
-                            640: {
-                                slidesPerView: 2,
-                                spaceBetween: 15,
-                            },
-                            768: {
-                                slidesPerView: 2.5,
-                                spaceBetween: 0,
-                            },
-                            1024: {
-                                slidesPerView: 2.8,
-                                spaceBetween: 0,
-                            },
-                            1280: {
-                                slidesPerView: 3,
-                                spaceBetween: 0,
-                            },
+                            320: { slidesPerView: 1.1, spaceBetween: 10 },
+                            480: { slidesPerView: 1.3, spaceBetween: 12 },
+                            640: { slidesPerView: 2, spaceBetween: 15 },
+                            768: { slidesPerView: 2.5, spaceBetween: 0 },
+                            1024: { slidesPerView: 2.8, spaceBetween: 0 },
+                            1280: { slidesPerView: 3, spaceBetween: 0 },
                         }}
                     >
                         {BESTSELLER_DATA.map((item, i) => (
@@ -139,7 +131,10 @@ const BestSellers = () => {
                                                 btnText="Shop Now"
                                                 onClick={handleShopNowClick}
                                             />
-                                            <div className="flex justify-center items-center bg-[#73A4E0] min-w-[48px] min-h-[48px] rounded-full">
+                                            <div
+                                                onClick={() => handleAddToCart(item)}
+                                                className="cursor-pointer flex justify-center items-center bg-[#73A4E0] min-w-[48px] min-h-[48px] rounded-full hover:bg-[#112D49] transition-colors"
+                                            >
                                                 <item.shop />
                                             </div>
                                         </div>
@@ -149,6 +144,7 @@ const BestSellers = () => {
                         ))}
                     </Swiper>
                 </div>
+
                 <div className="min-[1440px]:hidden flex justify-center items-center gap-3 px-4 z-10 mt-6">
                     <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
                         <LeftArrow />

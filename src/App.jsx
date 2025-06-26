@@ -16,6 +16,7 @@ import Testimonials from './components/Testimonials';
 import Bestsellers from './components/Bestsellers';
 import CheckOut from './components/CheckOut';
 import ProductDetail from './components/ProductDetail';
+import { CartProvider } from './context/CartContext'; // ✅ Add this
 
 function App() {
   const [isSignedUp, setIsSignedUp] = useState(() => {
@@ -28,6 +29,7 @@ function App() {
 
   const AppRoutes = () => {
     const navigate = useNavigate();
+
     useEffect(() => {
       const currentPath = window.location.pathname;
       if (isLoggedIn && (currentPath === '/login' || currentPath === '/signup')) {
@@ -74,7 +76,6 @@ function App() {
             path="/productdetail"
             element={isLoggedIn ? <ProductDetail /> : <LogIn onLogIn={handleLogIn} />}
           />
-
           <Route
             path="/addToCart"
             element={isLoggedIn ? <AddToCart /> : <LogIn onLogIn={handleLogIn} />}
@@ -91,7 +92,9 @@ function App() {
 
   return (
     <BrowserRouter>
-      <AppRoutes />
+      <CartProvider>
+        <AppRoutes />
+      </CartProvider>
     </BrowserRouter>
   );
 }
