@@ -41,7 +41,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-
+                <div className="border-gradient relative"></div>
                 <div className="flex flex-col sm:flex-row justify-between items-center max-w-[1140px] px-3 mx-auto py-4.5 sm:py-7.5 gap-3 text-center text-sm text-white">
                     <p className="text-xs sm:text-sm leading-[100%]">
                         Terms of Service | Privacy Policy

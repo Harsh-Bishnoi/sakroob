@@ -74,7 +74,7 @@ const BestSellers = () => {
             )}
             <div className="max-w-[1272px] mx-auto relative">
                 <Heading headingText="Bestsellers" />
-                <div className="max-[1440px]:hidden flex justify-center xl:justify-between items-center gap-3 px-4 z-10 min-[1440px]:absolute xl:top-1/2 xl:-left-15 xl:-right-20 transform xl:-translate-y-1/2">
+                <div className="max-[1440px]:hidden flex justify-center xl:justify-between items-center gap-3 px-4 z-10 min-[1440px]:absolute xl:top-[60%] xl:-left-15 xl:-right-20 transform xl:-translate-y-1/2">
                     <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
                         <LeftArrow />
                     </div>

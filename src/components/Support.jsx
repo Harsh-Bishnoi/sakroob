@@ -1,26 +1,38 @@
-import React from 'react'
-import { SUPPORT_DATA } from '../utils/helper'
+import React from 'react';
+import { SUPPORT_DATA } from '../utils/helper';
 
 const Support = () => {
     return (
-        <>
-            <div className="flex justify-center items-center max-xl:px-6 px-3 mt-10.5 sm:mt-14 md::mt-[67px]">
-                <div className="max-w-[1384px] mx-auto">
-                    <div className="bg-[#F1F6FC] px-[71.5px] py-[43px] flex max-[1440px]:gap-4 gap-9 max-[1440px]:px-8 max-xl:flex-wrap rounded-[8px] mx-auto">
-                        {SUPPORT_DATA.map((item, index) => (
-                            <div key={index} className={`sm:flex gap-2 justify-start max-[773px]:max-w-[241px] max-[773px]:w-full mx-auto items-center sm:h-[61px] ${index === 4 ? "" : " max-sm:border-b sm:border-r md:pr-4 min-[1440px]:pr-9"}`}>
-                                <div className="bg-[#73A4E0] size-[47px] rounded-[98px] flex justify-center items-center max-sm:mx-auto"><item.icon /></div>
-                                <div className="">
-                                    <h4 className='font-bold text-center sm:text-start leading-[150%] text-black whitespace-nowrap'>{item.title}</h4>
-                                    <p className='text-sm leading-[120%] text-center sm:text-start text-black whitespace-nowrap pt-1'>{item.description}</p>
+        <div className="flex justify-center px-3 sm:px-6 mt-10 sm:mt-14 md:mt-[67px]">
+            <div className="w-full max-w-[1384px]">
+                <div className="bg-[#F1F6FC] rounded-[8px] flex flex-wrap justify-center items-center gap-6 sm:gap-4 px-6 sm:px-8 py-6 relative z-0">
+                    {SUPPORT_DATA.map((item, index) => (
+                        <div
+                            key={index}
+                            className="relative max-w-[241px] w-full sm:w-auto min-h-[80px] sm:min-h-[61px] z-0"
+                        >
+                            <div className="flex sm:flex-row flex-col items-center sm:items-start text-center sm:text-left sm:h-[61px] gap-2 sm:gap-4 px-4 py-4 sm:py-0 relative z-10 bg-[#F1F6FC]">
+                                <div className="bg-[#73A4E0] size-[47px] rounded-full flex justify-center items-center mb-2 sm:mb-0">
+                                    <item.icon />
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-black text-sm leading-[150%] whitespace-nowrap">
+                                        {item.title}
+                                    </h4>
+                                    <p className="text-sm text-black leading-[120%] pt-1 whitespace-nowrap">
+                                        {item.description}
+                                    </p>
                                 </div>
                             </div>
-                        ))}
-                    </div>
+                            {index !== SUPPORT_DATA.length - 1 && (
+                                <div className="relative sm:hidden vertical-gradient h-[1px] w-full" />
+                            )}
+                        </div>
+                    ))}
                 </div>
             </div>
-        </>
-    )
-}
+        </div>
+    );
+};
 
-export default Support
+export default Support;

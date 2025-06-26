@@ -69,7 +69,7 @@ const Header = () => {
                                         <div className="dropdown-menu absolute top-full -left-[60px] mt-2 bg-white shadow-[0px_0px_11.4px_0px_#73A4E033] rounded-[8px] p-4 w-[251px] z-10">
                                             <ul>
                                                 <li><a onClick={handleDropdownLinkClick} href="#" className="text-[#112D49] leading-[150%] opacity-80 block py-1">Reference Earlier Examples</a></li>
-                                                <hr className="my-3 border-black" />
+                                                <div className="h-[0.5px] w-full relative vertical-gradient my-3"></div>
                                                 <li><a onClick={handleDropdownLinkClick} href="#" className="text-[#112D49] leading-[150%] opacity-80 block py-1">Standard PC Components</a></li>
                                             </ul>
                                         </div>
@@ -95,9 +95,9 @@ const Header = () => {
                                         <div className="dropdown-menu absolute top-full -left-[60px] mt-2 bg-white shadow-[0px_0px_11.4px_0px_#73A4E033] rounded-[8px] p-4 w-[251px] z-10">
                                             <ul>
                                                 <li><a onClick={handleDropdownLinkClick} href="#" className="text-[#112D49] leading-[150%] opacity-80 block py-1">FAQ’s</a></li>
-                                                <hr className="my-3 border-black" />
+                                                <div className="h-[0.5px] w-full relative vertical-gradient my-3"></div>
                                                 <li><a onClick={handleDropdownLinkClick} href="#" className="text-[#112D49] leading-[150%] opacity-80 block py-1">Returns</a></li>
-                                                <hr className="my-3 border-black" />
+                                                <div className="h-[0.5px] w-full relative vertical-gradient my-3"></div>
                                                 <li><a onClick={handleDropdownLinkClick} href="#" className="text-[#112D49] leading-[150%] opacity-80 block py-1">Contact</a></li>
                                             </ul>
                                         </div>

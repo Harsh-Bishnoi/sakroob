@@ -52,11 +52,11 @@ const Testimonials = () => {
                                         alt="client-img"
                                     />
                                     <div className="pt-4 leading-[150%] text-[#112D49] opacity-80">
-                                        <p className="flex-1">
-                                            <LeftQuotationIcon />
-                                            But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth,
-                                            <RightQuotationIcon />
-                                        </p>
+                                        <div className="flex-1 relative">
+                                            <div className="absolute top-[-12px] max-lg:hidden left-[5px]"><LeftQuotationIcon /></div>
+                                            <p> But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth,</p>
+                                            <div className="absolute bottom-[-10px] max-lg:hidden right-[50px]"><RightQuotationIcon /></div>
+                                        </div>
                                     </div>
                                     <img
                                         className="mx-auto mt-2 md:mt-3"
