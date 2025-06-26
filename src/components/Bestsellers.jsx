@@ -7,8 +7,15 @@ import CustomButton from "./common/CustomButton";
 import { FilledHeart, HeartIcon, LeftArrow, RightArrow } from "../utils/Icons";
 import { BESTSELLER_DATA } from "../utils/helper";
 import Heading from "./common/Heading";
+import { useNavigate } from 'react-router-dom';
 
 const BestSellers = () => {
+    const navigate = useNavigate();
+
+    const handleShopNowClick = () => {
+        navigate("/checkout");
+    };
+
     const [favoriteItems, setFavoriteItems] = useState(() => {
         const storedFavorites = localStorage.getItem("favoriteItems");
         return storedFavorites ? JSON.parse(storedFavorites) : [];
@@ -127,7 +134,11 @@ const BestSellers = () => {
                                             <img className="max-xl:max-w-[98px] max-w-[128px]" src={item.star} alt="" />
                                         </div>
                                         <div className="mt-[25px] flex justify-between items-center gap-6">
-                                            <CustomButton btnClass="hover:bg-[#112D49] hover:text-white max-w-[260px] w-full" btnText="Shop Now" />
+                                            <CustomButton
+                                                btnClass="hover:bg-[#112D49] hover:text-white max-w-[260px] w-full"
+                                                btnText="Shop Now"
+                                                onClick={handleShopNowClick}
+                                            />
                                             <div className="flex justify-center items-center bg-[#73A4E0] min-w-[48px] min-h-[48px] rounded-full">
                                                 <item.shop />
                                             </div>

@@ -63,13 +63,17 @@ function App() {
                   <Bestsellers />
                   <Blog />
                   <Testimonials />
-                  <CheckOut />
                 </>
               ) : (
                 <LogIn onLogIn={handleLogIn} />
               )
             }
           />
+          <Route
+            path="/checkout"
+            element={isLoggedIn ? <CheckOut /> : <LogIn onLogIn={handleLogIn} />}
+          />
+
           <Route
             path="/addToCart"
             element={isLoggedIn ? <AddToCart /> : <LogIn onLogIn={handleLogIn} />}
