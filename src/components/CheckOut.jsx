@@ -1,12 +1,8 @@
 import React, { useState } from "react";
-import {
-    AmericanCard,
-    InformationIcon,
-    MasterCard,
-    Paypal,
-    VisaCard,
-} from "../utils/Icon";
+import { AmericanCard, InformationIcon, MasterCard, Paypal, VisaCard, } from "../utils/Icon";
 import CustomButton from "./common/CustomButton";
+import { useCart } from '../context/CartContext';
+
 
 const CheckOut = () => {
     const [checked, setChecked] = useState(false);
@@ -14,6 +10,8 @@ const CheckOut = () => {
     const [couponApplied, setCouponApplied] = useState(false);
     const [coupon, setCoupon] = useState("");
     const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+    const { cartItems } = useCart();
+
 
     const [formData, setFormData] = useState({
         email: "",
@@ -301,11 +299,38 @@ const CheckOut = () => {
                         )}
 
                         <div className="p-3.5 shadow-lg rounded-[8px]">
-                            <div className="flex items-center justify-between pb-[26px]">
-                                <p className="text-[#112D49]">Gaming Chair</p>
-                                <p className="text-[#112D49]">AED 357.99</p>
-                            </div>
-                            <a className="text-[#73A4E0] text-[13px] font-medium" href="#">
+                            {cartItems.length > 0 ? (
+                                <>
+                                    {cartItems.map((item) => (
+                                        <div key={item.id} className="flex items-center justify-between pb-[16px]">
+                                            <div className="flex items-center gap-3">
+                                                <img
+                                                    src={item.img}
+                                                    alt={item.title}
+                                                    className="w-[50px] h-[50px] object-fit rounded"
+                                                />
+                                                <div>
+                                                    <p className="text-[#112D49] text-sm max-w-[155px] font-medium">{item.title}</p>
+                                                    <p className="text-xs text-[#112D49] opacity-60">Qty: {item.quantity}</p>
+                                                </div>
+                                            </div>
+                                            <p className="text-[#112D49] flex font-medium">
+                                                ₹ {(item.price * item.quantity).toFixed(2)}
+                                            </p>
+                                        </div>
+                                    ))}
+
+                                    <div className="border-t border-gray-300 mt-4 pt-2 flex justify-between">
+                                        <p className="font-medium text-[#112D49]">Estimated total</p>
+                                        <p className="font-semibold text-[#112D49]">
+                                            ₹ {cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}
+                                        </p>
+                                    </div>
+                                </>
+                            ) : (
+                                <p className="text-[#112D49] text-center py-6">Your cart is empty.</p>
+                            )}
+                            <a className="text-[#73A4E0] text-[13px] font-medium block mt-[20px]" href="#">
                                 Have a coupon? Click here to enter your code
                             </a>
                             <div className="flex flex-col sm:flex-row gap-[10px] mt-[10px]">
@@ -322,6 +347,7 @@ const CheckOut = () => {
                                     btnText="Apply Now"
                                 />
                             </div>
+
                             <CustomButton
                                 onClick={handleSubmit}
                                 btnClass="hover:bg-[#112D49]/80 hover:text-white !w-full !max-w-[330px] mt-5"

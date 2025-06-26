@@ -10,7 +10,7 @@ const Footer = () => {
 
     return (
         <>
-            <div className={`bg-[#112D49] ${location.pathname === '/' ? "mt-[253px] sm:mt-[376px] " : " mt-[200px] md:mt-[300px]"}`}>
+            <div className={`bg-[#112D49] max-w-[1920px] mx-auto ${location.pathname === '/' ? "mt-[253px] sm:mt-[376px] " : " mt-[200px] md:mt-[300px]"}`}>
                 {location.pathname === '/' && <SakroobCircle />}
                 <div className="max-w-[1440px] mx-auto px-3">
                     <div className="py-10 mt-[-170px]">
