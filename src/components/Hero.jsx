@@ -18,7 +18,7 @@ const Hero = () => {
                     autoPlay
                     interval={3000}>
                     {slides.map((_, index) => (
-                        <div key={index} className="bg-[url(src/assets/images/png/hero-bg-img.png)] bg-no-repeat bg-cover bg-center h-[415px] sm:h-[500px] md:h-[600px] lg:h-[650px] w-full rounded-[8px] flex flex-col items-center justify-center text-center px-4 sm:px-6" >
+                        <div key={index} className="bg-[url(../src/assets/images/png/hero-bg-img.png)] bg-no-repeat bg-cover bg-center h-[415px] sm:h-[500px] md:h-[600px] lg:h-[650px] w-full rounded-[8px] flex flex-col items-center justify-center text-center px-4 sm:px-6" >
                             <h1 className="font-bold max-w-[264px] sm:max-w-[761px] mx-auto text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[120%] text-center pb-2 sm:pb-3 pt-[122px] sm:pt-[200px] md:pt-[220px] lg:pt-[237px] text-[#112D49]">
                                 Where Tinkerers Bring Ideas Alive
                             </h1>
