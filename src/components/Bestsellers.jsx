@@ -22,23 +22,19 @@ const BestSellers = () => {
         "bottom-[21px]", "-top-[80px]", "bottom-[5px]",
     ];
 
-    const renderNavigationArrows = (
-        <div className="flex justify-center xl:justify-between items-center gap-3 px-4 z-10 xl:absolute xl:top-1/2 xl:-left-11 xl:-right-11 transform xl:-translate-y-1/2">
-            <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
-                <LeftArrow />
-            </div>
-            <div className="swiper-arrow next-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
-                <RightArrow />
-            </div>
-        </div>
-    );
-
     return (
         <div className="px-3 mt-[132px]">
             <div className="max-w-[1272px] mx-auto relative">
                 <Heading headingText="Bestsellers" />
 
-                {renderNavigationArrows}
+                <div className=" max-[1440px]:hidden flex justify-center xl:justify-between items-center gap-3 px-4 z-10 min-[1440px]:absolute xl:top-1/2 xl:-left-15 xl:-right-20 transform xl:-translate-y-1/2">
+                    <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                        <LeftArrow />
+                    </div>
+                    <div className="swiper-arrow next-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                        <RightArrow />
+                    </div>
+                </div>
 
                 <Swiper
                     modules={[Navigation]}
@@ -62,25 +58,24 @@ const BestSellers = () => {
                             slidesOffsetAfter: 16,
                         },
                         640: {
-                            slidesPerView: 1.5,
+                            slidesPerView: 2,
                             spaceBetween: 15,
                             slidesOffsetBefore: 20,
                             slidesOffsetAfter: 20,
                         },
                         768: {
-                            slidesPerView: 2.2,
+                            slidesPerView: 2.5,
                             spaceBetween: 15,
                             slidesOffsetBefore: 20,
                             slidesOffsetAfter: 20,
                         },
                         1024: {
-                            slidesPerView: 3,
                             spaceBetween: 20,
                             slidesOffsetBefore: 24,
                             slidesOffsetAfter: 24,
                         },
                         1280: {
-                            slidesPerView: 3.2,
+                            slidesPerView: 3,
                             spaceBetween: 24,
                             slidesOffsetBefore: 32,
                             slidesOffsetAfter: 32,
@@ -122,6 +117,14 @@ const BestSellers = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+                <div className="min-[1440px]:hidden flex justify-center items-center gap-3 px-4 z-10 mt-6">
+                    <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                        <LeftArrow />
+                    </div>
+                    <div className="swiper-arrow next-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                        <RightArrow />
+                    </div>
+                </div>
             </div>
         </div>
     );
