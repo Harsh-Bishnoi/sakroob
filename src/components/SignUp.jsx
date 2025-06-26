@@ -4,7 +4,7 @@ import Heading from './common/Heading';
 import Description from './common/Description';
 import CustomInput from './common/CustomInput';
 import CustomButton from './common/CustomButton';
-import { PasswordEye, ShowPasswordEye } from '../utils/icons';
+import { PasswordEye, ShowPasswordEye } from '../utils/Icon';
 import { NavLink } from 'react-router-dom';
 
 const SignUp = ({ onSignUp }) => {

@@ -4,7 +4,7 @@ import { SUPPORT_DATA } from '../utils/helper'
 const Support = () => {
     return (
         <>
-            <div className="flex justify-center items-center max-xl:px-6 px-3 mt-[67px]">
+            <div className="flex justify-center items-center max-xl:px-6 px-3 mt-10.5 sm:mt-14 md::mt-[67px]">
                 <div className="max-w-[1384px] mx-auto">
                     <div className="bg-[#F1F6FC] px-[71.5px] py-[43px] flex max-[1440px]:gap-4 gap-9 max-[1440px]:px-8 max-xl:flex-wrap rounded-[8px] mx-auto">
                         {SUPPORT_DATA.map((item, index) => (

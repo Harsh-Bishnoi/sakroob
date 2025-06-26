@@ -1,6 +1,6 @@
 import React from 'react';
 import Heading from '../components/common/Heading';
-import { LinkArrowIcon } from '../utils/icons';
+import { LinkArrowIcon } from '../utils/Icon';
 import storageImg from '../assets/images/png/storage-system-img.png';
 import fiveToolsImg from '../assets/images/png/five-tools-img.png';
 import fiveToolsMobileImg from '../assets/images/png/five-tools-mobile-img.png';
@@ -11,7 +11,7 @@ import Description from './common/Description';
 const Blog = () => {
     return (
         <>
-            <div className="flex justify-center items-center px-6 sm:px-7 mt-[132px]">
+            <div className="flex justify-center items-center px-6 sm:px-7 mt-[110px] sm:mt-[132px]">
                 <div className="max-w-[1386px] mx-auto w-full">
                     <Heading headingClass="max-w-[700px] mx-auto" headingText="Blog, Guides, Build Logs & More" />
                     <div className="xl:flex xl:mb-6 mt-8 sm:mt-12 md:mt-16 gap-6.5">

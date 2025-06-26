@@ -10,7 +10,7 @@ import kitImg from '../assets/images/png/repair-kit-img.png';
 const Product = () => {
     return (
         <>
-            <div className="flex justify-center items-center mt-[132px]">
+            <div className="flex justify-center items-center mt-[112px] sm:mt-[132px]">
                 <div className="max-w-[1384px] w-full px-4 mx-auto">
                     <p className='text-center italic text-lg sm:text-xl leading-[120%] text-[#112D49]'>Featured Categories</p>
                     <Heading headingClass="max-w-[700px] pt-2 mx-auto text-center" headingText="Shop Our Most Popular Products" />

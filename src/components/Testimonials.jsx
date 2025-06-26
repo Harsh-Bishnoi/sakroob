@@ -5,16 +5,16 @@ import 'swiper/css';
 import { Navigation } from 'swiper/modules';
 import { TESTMONIAL_DATA } from '../utils/helper';
 import starImg from '../assets/images/png/star-img.png';
-import { LeftArrow, LeftQuotationIcon, RightArrow, RightQuotationIcon } from '../utils/icons';
+import { LeftArrow, LeftQuotationIcon, RightArrow, RightQuotationIcon } from '../utils/Icon';
 
 const Testimonials = () => {
     return (
-        <div className="px-4 md:px-6 lg:px-8 mt-20">
+        <div className="px-4 md:px-6 lg:px-8 mt-[54px] sm:mt-20">
             <div className="max-w-[1140px] mx-auto">
                 <p className="text-center italic text-lg sm:text-xl md:text-xl text-[#112D49] mb-2">
                     Testimonials
                 </p>
-                <Heading headingClass="max-sm:max-w-[259px] mx-auto" headingText="What our client’s says " />
+                <Heading headingClass=" max-sm:max-w-[250px] mx-auto" headingText="What our client’s says " />
                 <div className="mt-8 sm:mt-11 md:mt-[59px] relative">
                     <div className="max-xl:hidden flex xl:absolute top-1/2 xl:-left-14 xl:-right-14 2xl:-left-20 2xl:-right-20 transform -translate-y-1/2 justify-between items-center px-4 z-10">
                         <div className="swiper-arrow prev-btn cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">

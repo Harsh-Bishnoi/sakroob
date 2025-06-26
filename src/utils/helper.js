@@ -1,4 +1,4 @@
-import { DeliveryIcon, FacebookSvg, GameIcon, GiftIcon, GraphicIcon, HeartIcon, InstagramSvg, MoniterIcon, PremiumIcon, ReturnIcon, ShopIcon, SmartWatchIcon, StorageIcon, SupportIcon, TelevisionIcon, TwitterSvg, YoutubeSvg } from './Icons'
+import { DeliveryIcon, FacebookSvg, GameIcon, GiftIcon, GraphicIcon, HeartIcon, InstagramSvg, MoniterIcon, PremiumIcon, ReturnIcon, ShopIcon, SmartWatchIcon, StorageIcon, SupportIcon, TelevisionIcon, TwitterSvg, YoutubeSvg } from './Icon'
 import manImg from '../assets/images/png/testimonial-swiper-img-1.png'
 import womanImg from '../assets/images/png/testimonial-swiper-img-2.png'
 import gamingPc from '../assets/images/png/gaming-pc-img.png'

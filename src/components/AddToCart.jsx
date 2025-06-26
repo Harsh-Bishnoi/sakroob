@@ -1,10 +1,10 @@
 import React from 'react';
 import Heading from './common/Heading';
 import { NavLink, useNavigate } from 'react-router-dom';
-import productImage from '../assets/images/png/product.png';
-import { DeleteIcon, IncreaseIcon, ReduceIcon } from '../utils/icons';
+// import productImage from '../assets/images/png/product.png';
 import CustomButton from '../components/common/CustomButton';
 import { useCart } from '../context/CartContext';
+import { DeleteIcon, IncreaseIcon, ReduceIcon } from '../utils/Icon';
 
 const AddToCart = () => {
     const navigate = useNavigate();

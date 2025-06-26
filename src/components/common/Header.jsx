@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CartIcon, DropdownArrow, HeaderLogo, LikeIcon, ProfileIcon, SearchIcon, UserIcon, } from '../../utils/icons';
+import { CartIcon, DropdownArrow, HeaderLogo, LikeIcon, ProfileIcon, SearchIcon, UserIcon, } from '../../utils/Icon';
 import CustomInput from './CustomInput';
 import { NavLink } from 'react-router-dom';
 

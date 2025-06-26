@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterLogo } from '../../utils/icons'
+import { FooterLogo } from '../../utils/Icon'
 import Description from './Description'
 import { FOOTER_LINKS, SOCIAL_LINKS } from '../../utils/helper'
 import SakroobCircle from '../SakroobCircle'

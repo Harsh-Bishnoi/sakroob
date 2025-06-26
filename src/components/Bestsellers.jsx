@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { FilledHeart, HeartIcon, LeftArrow, RightArrow } from "../utils/icons";
+import { FilledHeart, HeartIcon, LeftArrow, RightArrow } from "../utils/Icon";
 import CustomButton from "./common/CustomButton";
 import { BESTSELLER_DATA } from "../utils/helper";
 import Heading from "./common/Heading";
@@ -66,7 +66,7 @@ const BestSellers = () => {
     ];
 
     return (
-        <div className="px-3 mt-[132px] relative">
+        <div className="px-3 mt-[112px] sm:mt-[132px] relative">
             {showPopup && (
                 <div className="absolute top-5 right-5 transform bg-[#112D49] text-white px-4 py-2 rounded shadow-lg z-50 transition-all duration-300">
                     {popupMessage}
@@ -101,7 +101,7 @@ const BestSellers = () => {
                         }}
                     >
                         {BESTSELLER_DATA.map((item, i) => (
-                            <SwiperSlide className="pt-[100px]" key={item.id}>
+                            <SwiperSlide className="pt-[54px] sm:pt-[100px]" key={item.id}>
                                 <div className="w-full sm:max-w-[364px] hover:shadow-[0px_0px_11.4px_0px_#73A4E033] border border-[#112D4914] hover:border-transparent duration-300 rounded-[8px] p-4 flex flex-col justify-between h-full min-h-[536px]">
                                     <div>
                                         <div className={`w-full h-[242px] flex items-center justify-center relative ${i === 1 ? "bg-[#EEF4FB]" : "bg-[#E5E4E2]"}`}>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Heading from "./common/Heading";
-import { ReduceIcon, IncreaseIcon } from "../utils/icons";
+import { ReduceIcon, IncreaseIcon } from "../utils/Icon";
 import CustomButton from "./common/CustomButton";
 
 const ProductDetail = () => {
