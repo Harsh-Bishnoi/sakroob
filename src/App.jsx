@@ -17,6 +17,7 @@ import Bestsellers from './components/Bestsellers';
 import CheckOut from './components/CheckOut';
 import ProductDetail from './components/ProductDetail';
 import { CartProvider } from './context/CartContext'; // ✅ Add this
+import BackToTop from './components/common/BackToTop';
 
 function App() {
   const [isSignedUp, setIsSignedUp] = useState(() => {
@@ -86,6 +87,7 @@ function App() {
           />
         </Routes>
         {isLoggedIn && <Footer />}
+        <BackToTop />
       </>
     );
   };
