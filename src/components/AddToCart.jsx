@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
 import Heading from './common/Heading';
+import { useNavigate } from 'react-router-dom';
 import productImage from '../assets/images/png/product.png';
-import { DeleteIcon, IncreaseIcon, ReduceIcon } from '../utils/Icons';
+import { DeleteIcon, IncreaseIcon, ReduceIcon } from '../utils/icons';
 import CustomButton from '../components/common/CustomButton'
 
 const AddToCart = () => {
+
+    const navigate = useNavigate();
+
+    const handleCheckout = () => {
+        navigate('/checkout');
+    };
+
     const [cartItems, setCartItems] = useState([
         {
             id: 1,
@@ -120,7 +128,7 @@ const AddToCart = () => {
                                     <p className='text-[#112D49] font-semibold leading-[100%]'>₹ {totalAmount.toFixed(2)}</p>
                                 </div>
                                 <p className='pt-2 leading-[150%] text-[#112D49] opacity-80'>Taxes, discounts and shipping calculated at checkout. </p>
-                                <CustomButton btnClass="w-full bg-[#112D49] text-white mt-6 mb-5 hover:bg-[#112D49]/80" btnText="Check out" />
+                                <CustomButton onClick={handleCheckout} btnClass="w-full bg-[#112D49] text-white mt-6 mb-5 hover:bg-[#112D49]/80" btnText="Check out" />
                             </div>
                         </div>
                     </div>
