@@ -14,6 +14,7 @@ import SignUp from './components/SignUp';
 import Support from './components/Support';
 import Testimonials from './components/Testimonials';
 import Bestsellers from './components/Bestsellers';
+import CheckOut from './components/CheckOut';
 
 function App() {
   const [isSignedUp, setIsSignedUp] = useState(() => {
@@ -62,6 +63,7 @@ function App() {
                   <Bestsellers />
                   <Blog />
                   <Testimonials />
+                  <CheckOut />
                 </>
               ) : (
                 <LogIn onLogIn={handleLogIn} />

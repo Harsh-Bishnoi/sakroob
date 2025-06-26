@@ -48,7 +48,7 @@ const LogIn = ({ onLogIn }) => {
 
 
     return (
-        <div className="flex min-h-screen justify-center items-center px-4 bg-[url(src/assets/images/png/login-bg-img.png)]">
+        <div className="flex min-h-screen justify-center items-center px-4 bg-[url(../src/assets/images/png/login-bg-img.png)]">
             <div className="max-w-[590px] w-full bg-white border border-[#E3E3E3] rounded-[15px] shadow-[0px_10px_30px_0px_#0000000D] mx-auto px-4 py-6 sm:p-16">
                 <form onSubmit={handleSubmit}>
                     <div className="max-w-[462px] mx-auto">
