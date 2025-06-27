@@ -9,7 +9,7 @@ import { LeftArrow, LeftQuotationIcon, RightArrow, RightQuotationIcon } from '..
 
 const Testimonials = () => {
     return (
-        <div className="px-4 md:px-6 lg:px-8 mt-[54px] sm:mt-20">
+        <div className="px-4 md:px-6 lg:px-8 mt-[54px] sm:mt-33">
             <div className="max-w-[1140px] mx-auto">
                 <p className="text-center italic text-lg sm:text-xl md:text-xl text-[#112D49] mb-2">
                     Testimonials
@@ -45,7 +45,7 @@ const Testimonials = () => {
                     >
                         {TESTMONIAL_DATA.map((data, index) => (
                             <SwiperSlide key={index} className="flex justify-center">
-                                <div className="w-full max-w-[558px] px-4 py-6 rounded-md mx-auto text-center">
+                                <div className="w-full transition-all duration-200 ease-linear bg-white hover:shadow-[0px_2px_20px_0px_#112D491A] max-w-[558px] px-4 py-6 rounded-md mx-auto text-center">
                                     <img
                                         className="mx-auto w-20 h-20 object-cover rounded-full"
                                         src={data.img}
@@ -71,7 +71,7 @@ const Testimonials = () => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                    <div className="xl:hidden flex justify-center gap-3 items-center px-4 z-10">
+                    <div className="xl:hidden mt-6 flex justify-center gap-3 items-center px-4 z-10">
                         <div className="swiper-arrow prev-btn cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
                             <LeftArrow />
                         </div>
