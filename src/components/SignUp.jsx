@@ -75,8 +75,11 @@ const SignUp = ({ onSignUp }) => {
         setShowPopup(true);
         setTimeout(() => {
             setShowPopup(false);
+        }, 500);
+
+        setTimeout(() => {
             navigate('/login');
-        }, 3000);
+        }, 1000);
 
         if (typeof onSignUp === "function") {
             onSignUp();
@@ -95,7 +98,7 @@ const SignUp = ({ onSignUp }) => {
                         />
 
                         <CustomInput
-                            inputClass="!py-3.5 !px-7 mt-6"
+                            inputClass="!py-[15px] !px-7 mt-6 !border-0 !bg-[#F4F8F7]"
                             name="firstName"
                             value={inputValue.firstName}
                             type="text"
@@ -110,7 +113,7 @@ const SignUp = ({ onSignUp }) => {
                         )}
 
                         <CustomInput
-                            inputClass="!py-3.5 !px-7 mt-3"
+                            inputClass="!py-[15px] !px-7 mt-3 !border-0 !bg-[#F4F8F7]"
                             name="lastName"
                             value={inputValue.lastName}
                             type="text"
@@ -125,7 +128,7 @@ const SignUp = ({ onSignUp }) => {
                         )}
 
                         <CustomInput
-                            inputClass="!py-3.5 !px-7 mt-3"
+                            inputClass="!py-[15px] !px-7 mt-3 !border-0 !bg-[#F4F8F7]"
                             name="email"
                             value={inputValue.email}
                             type="email"
@@ -141,7 +144,7 @@ const SignUp = ({ onSignUp }) => {
 
                         <div className="relative">
                             <CustomInput
-                                inputClass="!py-3.5 !px-7 my-3"
+                                inputClass="!py-[15px] !px-7 !border-0 !bg-[#F4F8F7] mt-3"
                                 name="password"
                                 value={inputValue.password}
                                 type={showPassword ? "text" : "password"}
