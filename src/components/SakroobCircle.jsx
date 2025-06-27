@@ -52,9 +52,6 @@ const SakroobCircle = () => {
                                     value={email}
                                     onChange={handleChange}
                                 />
-                                {error && (
-                                    <p className="text-red-500 text-sm mt-1">{error}</p>
-                                )}
                             </div>
                             <CustomButton
                                 btnClass="bg-[#112D49] hover:bg-[#112D49]/80 z-1 max-sm:w-full max-sm:mt-4 max-sm:text-sm text-white sm:absolute right-[7px] top-[8px]"
