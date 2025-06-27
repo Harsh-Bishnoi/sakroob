@@ -42,8 +42,8 @@ const BestSellers = () => {
                 : [...prev, index];
 
             const message = isAlreadyFavorite
-                ? "Removed from favorites 💔"
-                : "Added to favorites ❤️";
+                ? "Removed from favorites"
+                : "Added to favorites";
 
             showFavoritePopup(message);
             localStorage.setItem("favoriteItems", JSON.stringify(updatedFavorites));
@@ -68,7 +68,7 @@ const BestSellers = () => {
     return (
         <div id="bestseller" className="px-3 mt-[112px] sm:mt-[132px] relative">
             {showPopup && (
-                <div className="absolute top-5 right-5 transform bg-[#112D49] text-white px-4 py-2 rounded shadow-lg z-50 transition-all duration-300">
+                <div className="fixed bottom-5 right-20 transform bg-[#112D49] text-white px-4 py-2 rounded shadow-lg z-50 transition-all duration-300">
                     {popupMessage}
                 </div>
             )}
