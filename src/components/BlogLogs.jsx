@@ -9,6 +9,7 @@ import playerImg from '../assets/images/png/computer-player-img.png';
 import CustomButton from './common/CustomButton';
 import Description from './common/Description';
 import { Link } from 'react-router-dom';
+
 const BlogLogs = () => {
     return (
         <>
