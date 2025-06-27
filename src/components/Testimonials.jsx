@@ -14,7 +14,7 @@ const Testimonials = () => {
                 <p className="text-center italic text-lg sm:text-xl md:text-xl text-[#112D49] mb-2">
                     Testimonials
                 </p>
-                <Heading headingClass=" max-sm:max-w-[250px] mx-auto" headingText="What our client’s says " />
+                <Heading headingClass=" max-sm:max-w-[250px] mx-auto" headingText="What Our Client’s Says " />
                 <div className="mt-8 sm:mt-11 md:mt-[59px] relative">
                     <div className="max-xl:hidden flex xl:absolute top-1/2 xl:-left-14 xl:-right-14 2xl:-left-20 2xl:-right-20 transform -translate-y-1/2 justify-between items-center px-4 z-10">
                         <div className="swiper-arrow prev-btn cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
