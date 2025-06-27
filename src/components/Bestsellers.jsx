@@ -123,7 +123,7 @@ const BestSellers = () => {
                                     <div>
                                         <div className="flex flex-wrap justify-between items-center mt-4">
                                             <p className="font-semibold text-xl xl:text-2xl text-[#112D49]">₹ {Number(item.price).toFixed(2)}</p>
-                                            <img className="max-xl:max-w-[98px] max-w-[128px]" src={item.star} alt="" />
+                                            <img className="max-xl:max-w-[98px] max-w-[128px]" src={item.star} alt="star-img" />
                                         </div>
                                         <div className="mt-[25px] flex justify-between items-center gap-6">
                                             <CustomButton

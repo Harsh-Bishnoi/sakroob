@@ -55,7 +55,7 @@ const AddToCart = () => {
                                                         <button onClick={() => decrement(item.id)} className="w-[44px] h-[40px] bg-[#73A4E0] hover:bg-[#73A4E0]/60 text-white rounded-l flex items-center justify-center cursor-pointer transition-a;l duration-200 ease-linear">
                                                             <ReduceIcon />
                                                         </button>
-                                                        <div className="w-[60px] h-[40px] border-y flex items-center justify-center text-[#112D49] text-xl">{item.quantity}</div>
+                                                        <div className="w-[60px] h-[40px] border-y border-[#0000003D] flex items-center justify-center text-[#112D49] text-xl"> {item.quantity < 10 ? `0${item.quantity}` : item.quantity}</div>
                                                         <button onClick={() => increment(item.id)} className="w-[44px] h-[40px] bg-[#112D49] hover:bg-[#112D49]/60 text-white rounded-r flex items-center justify-center cursor-pointer transition-a;l duration-200 ease-linear">
                                                             <IncreaseIcon />
                                                         </button>
