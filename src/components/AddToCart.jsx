@@ -39,7 +39,7 @@ const AddToCart = () => {
                                         <tr key={item.id}>
                                             <td className="flex items-center gap-5 px-5 w-[451px] pt-[47px]">
                                                 <div className="min-w-[85px] min-h-[85px] border rounded-[7px] relative flex items-center justify-center">
-                                                    <img src={item.img} alt="product" className="object-fit rounded max-w-[50px] max-h-[72px]" />
+                                                    <img src={item.img} alt="product" className="pointer-events-none object-fit rounded max-w-[50px] max-h-[72px]" />
                                                     <div className="size-[34.24px] left-[68.47px] -top-4 bg-[#C7C7C7] rounded-full flex items-center justify-center text-[#112D49] absolute">
                                                         {item.quantity}
                                                     </div>

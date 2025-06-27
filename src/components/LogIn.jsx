@@ -58,7 +58,7 @@ const LogIn = ({ onLogIn }) => {
                             descriptionText="Log in below to access your account and keep things running smoothly."
                         />
                         <CustomInput
-                            inputClass="!py-3.5 !px-7 mt-6"
+                            inputClass="!py-[15px] !border-0 !bg-[#F4F8F7] !px-7 mt-6"
                             name="email"
                             value={inputValue.email}
                             type="email"
@@ -73,7 +73,7 @@ const LogIn = ({ onLogIn }) => {
 
                         <div className="relative">
                             <CustomInput
-                                inputClass="!py-3.5 !px-7 my-3"
+                                inputClass="!py-[15px] !px-7 my-3 !border-0 !bg-[#F4F8F7]"
                                 name="password"
                                 value={inputValue.password}
                                 type={showPassword ? "text" : "password"}

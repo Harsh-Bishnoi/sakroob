@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CartIcon, DropdownArrow, HeaderLogo, LikeIcon, ProfileIcon, SearchIcon, UserIcon, } from '../../utils/Icon';
+import { CartIcon, DropdownArrow, FooterLogo, HeaderLogo, LikeIcon, ProfileIcon, SearchIcon, UserIcon, } from '../../utils/Icon';
 import CustomInput from './CustomInput';
 import { NavLink } from 'react-router-dom';
 
@@ -48,14 +48,12 @@ const Header = () => {
                 <div className="relative z-20 max-w-[1440px] mx-auto">
                     <div className="mx-auto py-[13px] lg:py-5 lg:hidden px-6 max-w-[1246px] flex items-center justify-between">
                         <NavLink to="/" className="header-logo">
-                            <HeaderLogo />
+                            <FooterLogo />
                         </NavLink>
-                        <div className="size-[30px]">
-                            <div onClick={toggleNavbar} className="max-w-[18px] z-50 relative cursor-pointer lg:hidden flex flex-col justify-center gap-[5px]">
-                                <span className={`rounded-3xl bg-white transition-transform duration-300 ease-in-out ${menuOpen ? 'rotate-45 translate-y-2 h-1' : 'w-[9.77px] h-[1px] ml-auto'}`}></span>
-                                <span className={`rounded-3xl mx-auto bg-white transition-transform duration-300 ease-in-out ${menuOpen ? 'opacity-0 h-1' : 'w-[18px] h-[1px] '}`}></span>
-                                <span className={`rounded-3xl bg-white transition-transform duration-300 ease-in-out ${menuOpen ? '-rotate-45 -translate-y-2.5 h-1' : ' w-[9.77px] h-[1px] '}`}></span>
-                            </div>
+                        <div onClick={toggleNavbar} className="max-w-[18px] size-[30px] z-50 relative cursor-pointer lg:hidden flex flex-col justify-center gap-[5px]">
+                            <span className={`rounded-3xl bg-white transition-transform duration-300 ease-in-out ${menuOpen ? 'rotate-45 translate-y-2 h-1' : 'w-[9.77px] h-[1px] ml-auto'}`}></span>
+                            <span className={`rounded-3xl mx-auto bg-white transition-transform duration-300 ease-in-out ${menuOpen ? 'opacity-0 h-1' : 'w-[18px] h-[1px] '}`}></span>
+                            <span className={`rounded-3xl bg-white transition-transform duration-300 ease-in-out ${menuOpen ? '-rotate-45 -translate-y-2.5 h-1' : ' w-[9.77px] h-[1px] '}`}></span>
                         </div>
                     </div>
                     <NavLink to="/" className="absolute ml-auto left-[10px] xl:left-[94px] max-lg:hidden max-w-[40px] top-[31px]">  <HeaderLogo /> </NavLink>

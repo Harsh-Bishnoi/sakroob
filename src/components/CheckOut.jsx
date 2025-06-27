@@ -307,7 +307,7 @@ const CheckOut = () => {
                                                 <img
                                                     src={item.img}
                                                     alt={item.title}
-                                                    className="w-[50px] h-[50px] object-fit rounded"
+                                                    className="w-[50px] pointer-events-none h-[50px] object-fit rounded"
                                                 />
                                                 <div>
                                                     <p className="text-[#112D49] text-sm max-w-[155px] font-medium">{item.title}</p>
