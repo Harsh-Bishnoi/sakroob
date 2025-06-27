@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
 
 import AddToCart from './components/AddToCart';
-import Blog from './components/Blog';
 import Footer from './components/common/Footer';
 import Header from './components/common/Header';
 import Hero from './components/Hero';
@@ -18,6 +17,7 @@ import CheckOut from './components/CheckOut';
 import ProductDetail from './components/ProductDetail';
 import { CartProvider } from './context/CartContext';
 import BackToTop from './components/common/BackToTop';
+import BlogLogs from './components/BlogLogs';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
@@ -56,7 +56,7 @@ function App() {
                   <Support />
                   <Product />
                   <Bestsellers />
-                  <Blog />
+                  <BlogLogs />
                   <Testimonials />
                 </>
               ) : (
