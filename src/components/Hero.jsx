@@ -9,7 +9,7 @@ const Hero = () => {
 
     return (
         <div className="flex justify-center items-center px-4 sm:px-6 lg:px-7 hero">
-            <div className="w-full max-w-[1384px] mx-auto">
+            <div className="w-full max-w-[1920px] mx-auto">
                 <Carousel
                     showArrows={false}
                     showThumbs={false}
