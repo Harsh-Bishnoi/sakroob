@@ -66,7 +66,7 @@ const BestSellers = () => {
     ];
 
     return (
-        <div className="px-3 mt-[112px] sm:mt-[132px] relative">
+        <div id="bestseller" className="px-3 mt-[112px] sm:mt-[132px] relative">
             {showPopup && (
                 <div className="absolute top-5 right-5 transform bg-[#112D49] text-white px-4 py-2 rounded shadow-lg z-50 transition-all duration-300">
                     {popupMessage}

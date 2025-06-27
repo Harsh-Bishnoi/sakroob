@@ -127,7 +127,7 @@ export const FOOTER_LINKS = [
     },
     {
         title: "Contact",
-        link: "#sakrobcircle",
+        link: "#sakroobcircle",
     },
 ]
 

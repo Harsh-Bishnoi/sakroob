@@ -3,7 +3,7 @@ import { SUPPORT_DATA } from '../utils/helper';
 
 const Support = () => {
     return (
-        <div className="flex justify-center px-3 sm:px-6 mt-10 sm:mt-14 md:mt-[67px]">
+        <div id='support' className="flex justify-center px-3 sm:px-6 mt-10 sm:mt-14 md:mt-[67px]">
             <div className="w-full max-w-[1384px]">
                 <div className="bg-[#F1F6FC] rounded-[8px] flex flex-wrap justify-center items-center gap-6 sm:gap-4 px-6 sm:px-8 py-6 relative z-0">
                     {SUPPORT_DATA.map((item, index) => (
