@@ -24,8 +24,8 @@ const Footer = () => {
                         <ul className="flex flex-wrap gap-4 sm:gap-6 justify-center pt-4.5 sm:pt-[27px] mx-auto max-sm:max-w-[246px]">
                             {FOOTER_LINKS.map((links, index) => (
                                 <li key={index}>
-                                    <a className='text-sm sm:text-base relative after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:w-0 after:bg-white after:rounded hover:after:w-full after:duration-300 after:ease-linear after:transition-all text-white font-medium leading-[150%]' href="#">
-                                        {links}
+                                    <a className='text-sm sm:text-base relative after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:w-0 after:bg-white after:rounded hover:after:w-full after:duration-300 after:ease-linear after:transition-all text-white font-medium leading-[150%]' href={links.link}>
+                                        {links.title}
                                     </a>
                                 </li>
                             ))}
@@ -41,14 +41,12 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="border-gradient relative"></div>
+                <div className="border-gradient relative mt-0.5 sm:mt-5 md:mt-10.5"></div>
                 <div className="flex flex-col sm:flex-row justify-between items-center max-w-[1140px] px-3 mx-auto py-4.5 sm:py-7.5 gap-3 text-center text-sm text-white">
-                    <p className="text-xs sm:text-sm leading-[100%]">
-                        Terms of Service | Privacy Policy
-                    </p>
-                    <p className="text-xs sm:text-sm leading-[100%]">
+                    <Link className="text-xs sm:text-sm leading-[100%]" to="">Terms of Service | Privacy Policy</Link>
+                    <Link className="text-xs sm:text-sm leading-[100%]">
                         © {new Date().getFullYear()} Skaroob. All Rights Reserved.
-                    </p>
+                    </Link>
                 </div>
             </div>
         </>

@@ -9,7 +9,7 @@ import { LeftArrow, LeftQuotationIcon, RightArrow, RightQuotationIcon } from '..
 
 const Testimonials = () => {
     return (
-        <div className="px-4 md:px-6 lg:px-8 mt-[54px] sm:mt-33">
+        <div id='faq' className="px-4 md:px-6 lg:px-8 mt-[54px] sm:mt-33">
             <div className="max-w-[1140px] mx-auto">
                 <p className="text-center italic text-lg sm:text-xl md:text-xl text-[#112D49] mb-2">
                     Testimonials

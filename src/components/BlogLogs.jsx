@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 const BlogLogs = () => {
     return (
         <>
-            <div className="flex justify-center items-center px-6 sm:px-7 mt-[110px] sm:mt-[132px]">
+            <div id='blog' className="flex justify-center items-center px-6 sm:px-7 mt-[110px] sm:mt-[132px]">
                 <div className="max-w-[1386px] mx-auto w-full">
                     <Heading headingClass="max-w-[700px] mx-auto" headingText="Blog, Guides, Build Logs & More" />
                     <div className="xl:flex xl:mb-6 mt-8 sm:mt-12 md:mt-16 gap-6.5">

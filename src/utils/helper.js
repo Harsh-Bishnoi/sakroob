@@ -109,11 +109,26 @@ export const TESTMONIAL_DATA = [
 ]
 
 export const FOOTER_LINKS = [
-    "Shipping",
-    "Warranty",
-    "FAQs",
-    "Blog",
-    "Contact"
+    {
+        title: "Shipping",
+        link: "#shop",
+    },
+    {
+        title: "Warranty",
+        link: "#warrant",
+    },
+    {
+        title: "FAQs",
+        link: "#faq",
+    },
+    {
+        title: "Blog",
+        link: "#blog",
+    },
+    {
+        title: "Contact",
+        link: "#sakrobcircle",
+    },
 ]
 
 export const SOCIAL_LINKS = [
