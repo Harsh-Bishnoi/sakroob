@@ -11,8 +11,8 @@ const Support = () => {
                             key={index}
                             className="relative max-w-[241px] w-full sm:w-auto min-h-[80px] sm:min-h-[61px] z-0"
                         >
-                            <div className="flex sm:flex-row flex-col items-center sm:items-start text-center sm:text-left sm:h-[61px] gap-2 sm:gap-4 px-4 py-4 sm:py-0 relative z-10 bg-[#F1F6FC]">
-                                <div className="bg-[#73A4E0] size-[47px] rounded-full flex justify-center items-center mb-2 sm:mb-0">
+                            <div className="flex sm:flex-row flex-col !items-center sm:items-start text-center sm:text-left sm:h-[61px] gap-2 sm:px-9 pb-4.5 sm:py-9 relative z-10 bg-[#F1F6FC]">
+                                <div className="bg-[#73A4E0] min-h-[47px] min-w-[47px] rounded-full flex justify-center items-center mb-2 sm:mb-0">
                                     <item.icon />
                                 </div>
                                 <div>
