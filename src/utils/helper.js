@@ -5,6 +5,9 @@ import gamingPc from '../assets/images/png/gaming-pc-img.png'
 import wirelessRouter from '../assets/images/png/wireless-router-img.png'
 import gamingChair from '../assets/images/png/gaming-chair-img.png'
 import starImg from '../assets/images/png/star-img.png'
+import pcCase from '../assets/images/png/pc-case.png'
+import gpu from '../assets/images/png/gpu.png'
+import fan from '../assets/images/png/fan-img.png'
 
 export const LISTSLIDER_DATA = [
     {
@@ -190,5 +193,35 @@ export const BESTSELLER_DATA = [
         heart: HeartIcon,
         shop: ShopIcon,
         id: 4
+    },
+];
+
+export const POPULAR_PRODUCT = [
+    {
+        img: pcCase,
+        title: "NZXT H510 Elite PC Case",
+        description: "Tempered glass case with clean cable management and optimized airflow.",
+        price: "  ₹249.99",
+        star: starImg,
+        Heart: HeartIcon,
+        shop: ShopIcon,
+    },
+    {
+        img: gpu,
+        title: "MSI GeForce RTX 4070 GPU",
+        description: "Ray tracing, AI-powered DLSS, and ultra-performance — redefine how you game.",
+        price: "  ₹349.99",
+        star: starImg,
+        Heart: HeartIcon,
+        shop: ShopIcon,
+    },
+    {
+        img: fan,
+        title: "Gaming Chair",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "  ₹249.99",
+        star: starImg,
+        Heart: HeartIcon,
+        shop: ShopIcon,
     },
 ];

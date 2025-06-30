@@ -5,6 +5,7 @@ import { IncreaseIcon, RatingIcon, ReduceIcon } from '../utils/Icon'
 import CustomButton from './common/CustomButton'
 import routerImg from '../assets/images/png/router-img.png'
 import smallRouter from '../assets/images/png/small-router.png'
+import PopularProduct from './PopularProduct'
 const ProductDetail = () => {
     const [count, setCount] = useState(1);
     const increment = () => setCount(count + 1);
@@ -61,6 +62,7 @@ const ProductDetail = () => {
                     </div>
                 </div>
             </div>
+            <PopularProduct />
         </>
     )
 }
