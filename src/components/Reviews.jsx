@@ -13,10 +13,10 @@ const Reviews = () => {
             <div className="mt-20 sm:mt-[85px] md:mt-[124px] px-3">
                 <div className="max-w-[1140px] mx-auto">
                     <Tabs>
-                        <TabList className="justify-between flex pl-8.5 pr-[135px]">
-                            <Tab className='outline-0 cursor-pointer text-2xl font-medium leading-[100%] text-[#112D49]'>Reviews</Tab>
-                            <Tab className="outline-0 cursor-pointer text-2xl font-medium leading-[100%] text-[#112D49]">Specifications</Tab>
-                            <Tab className="outline-0 cursor-pointer text-2xl font-medium leading-[100%] text-[#112D49]">FAQ’s</Tab>
+                        <TabList className="justify-between flex md:pl-8.5 md:pr-8.5 xl:pr-[135px]">
+                            <Tab className='outline-0 cursor-pointer texxt-xl md:text-2xl font-medium leading-[100%] text-[#112D49]'>Reviews</Tab>
+                            <Tab className="outline-0 cursor-pointer texxt-xl md:text-2xl font-medium leading-[100%] text-[#112D49]">Specifications</Tab>
+                            <Tab className="outline-0 cursor-pointer texxt-xl md:text-2xl font-medium leading-[100%] text-[#112D49]">FAQ’s</Tab>
                         </TabList>
                         <div className="border-[#EEF4FB] h-[7px] mt-3 rounded-[13px] border-[0.5px] shadow-[0px_0px_8.4px_0px_#73A4E01A]"></div>
                         <TabPanel>
