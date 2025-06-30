@@ -20,7 +20,7 @@ const PopularProduct = () => {
                     <Heading headingText="Popular Products" />
                     <div className="flex flex-wrap gap-6 flex-row mt-[87px]">
                         {POPULAR_PRODUCT.map((item, index) => (
-                            <div id={index} className="w-full !max-w-[364px] mx-auto md:w-6/12 lg:w-4/12 mb-6 md:mb-19">
+                            <div id={index} className="w-full !max-w-[364px] mx-auto md:w-6/12 lg:w-4/12 md:mb-19">
                                 <div className="max-w-[364px] border border-[#112D4914] bg-white rounded-lg p-4">
                                     <div className="bg-[#E5E4E2] justify-center items-center flex md:relative max-h-[242px] min-h-[242px] rounded-sm max-w-[332px]">
                                         <img className={`mx-auto md:absolute right-[50%] md:translate-x-1/2 ${index === 1 ? "-top-[15px] " : "-top-[70px] max-md:max-w-[150px]"}`} src={item.img} alt="product img" />
