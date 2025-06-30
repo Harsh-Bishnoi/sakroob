@@ -1,176 +1,68 @@
-import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import Heading from "./common/Heading";
-import { ReduceIcon, IncreaseIcon, RatingIcon } from "../utils/Icon";
-import CustomButton from "./common/CustomButton";
-
+import React, { useState } from 'react'
+import Heading from './common/Heading'
+import Description from './common/Description'
+import { IncreaseIcon, RatingIcon, ReduceIcon } from '../utils/Icon'
+import CustomButton from './common/CustomButton'
+import routerImg from '../assets/images/png/router-img.png'
+import smallRouter from '../assets/images/png/small-router.png'
 const ProductDetail = () => {
-    const { state } = useLocation();
-    const navigate = useNavigate();
-
-    if (!state) {
-        return (
-            <div className="text-center py-32 text-[#112D49] text-xl font-semibold">
-                No product selected. Please choose a product to continue.
-            </div>
-        );
-    }
-
-    const { id, title, description, price, img } = state;
-
-    const colors = ["#010101", "#112D49", "#20E572", "#FFFFFF", "#73A4E0"];
-    const [selectedColor, setSelectedColor] = useState("#EEF4FB");
-    const [quantity, setQuantity] = useState(1);
-
-    const increaseQuantity = () => setQuantity((prev) => prev + 1);
-    const decreaseQuantity = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
-
-    const handleBuyNow = () => {
-        const product = {
-            id,
-            title,
-            description,
-            price,
-            image: img,
-            quantity,
-            color: selectedColor,
-        };
-        navigate("/checkout", { state: { items: [product] } });
-    };
-
-    const handleAddToCart = () => {
-        const product = {
-            id,
-            title,
-            description,
-            price,
-            image: img,
-            quantity,
-            color: selectedColor,
-        };
-
-        addToCart(product);
-        toast.success("✅ Product added to cart!", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-        });
-    };
+    const [count, setCount] = useState(1);
+    const increment = () => setCount(count + 1);
+    const decrement = () => setCount(count - 1);
 
     return (
-        <div className="pt-[91px]">
-            <div className="max-w-[1140px] mx-auto px-3">
-                <div className="flex flex-wrap flex-row -mx-3">
-                    <div className="w-full lg:w-6/12 px-3 mb-8 lg:mb-0">
-                        <div
-                            className="py-[44px] px-[42px] max-w-[517px] rounded-[8px] mx-auto"
-                            style={{ backgroundColor: selectedColor }}
-                        >
-                            <img
-                                src={img}
-                                alt={title}
-                                className="max-w-[432px] w-full min-h-[475px] mx-auto"
-                            />
-                        </div>
-                        <div className="flex flex-wrap max-w-[517px] gap-[22px] mt-4 justify-center lg:justify-start mx-auto">
-                            {[1, 2, 3].map((_, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-[#EEF4FB] max-w-[156px] rounded-[4px] px-[30px] py-[9px]"
-                                >
-                                    <img
-                                        src={img}
-                                        alt={`Thumbnail ${index + 1}`}
-                                        className="max-w-[96px] min-h-[107px]"
-                                    />
+        <>
+            <div className="px-3 mt-12.5 sm:mt-[91px]">
+                <div className="max-w-[1140px] mx-auto">
+                    <div className="flex flex-wrap gap-[55px]">
+                        <div className="mx-auto">
+                            <div className="max-w-[517px] bg-[#EEF4FB] px-10.5 py-11 rounded-lg">
+                                <img className='w-full max-w-[432px]' src={routerImg} alt="" />
+                            </div>
+                            <div className="flex gap-5.5 mt-4 mx-auto">
+                                <div className="bg-[#F5F5F5] rounded-sm px-7.5 py-[8.5px]">
+                                    <img src={smallRouter} alt="" />
                                 </div>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="w-full lg:w-6/12 px-3">
-                        <Heading
-                            headingClass="!text-[34px] text-left !leading-[100%] max-w-[568px] mx-auto lg:mx-0"
-                            headingText={title}
-                        />
-                        <Para
-                            paraClass="pt-4 max-w-[568px] mx-auto lg:mx-0"
-                            paraText={description}
-                        />
-                        <Heading
-                            headingClass="!text-[34px] text-left pt-4 max-w-[568px] mx-auto lg:mx-0"
-                            headingText={`₹ ${Number(price).toFixed(2)}`}
-                        />
-                        <div className="pt-4 max-w-[568px] mx-auto lg:mx-0">
-                            <RatingIcon />
-                        </div>
-                        <div className="flex flex-col items-start gap-4 max-w-[568px] mx-auto lg:mx-0">
-                            <Para paraText="Select Color" paraClass="!font-semibold pt-[24px]" />
-                            <div className="flex items-center gap-[6.52px] flex-wrap">
-                                {colors.map((color, index) => (
-                                    <div
-                                        key={index}
-                                        onClick={() => setSelectedColor(color)}
-                                        className={`w-[29px] h-[29px] rounded-full flex items-center justify-center cursor-pointer border
-                    ${color === "#FFFFFF" ? "shadow" : ""}
-                    ${selectedColor === color ? "border-gray-400" : "border-transparent"}`}
-                                        style={{ backgroundColor: color }}
-                                    >
-                                        {selectedColor === color && (
-                                            <svg
-                                                width="19"
-                                                height="14"
-                                                viewBox="0 0 19 14"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path
-                                                    d="M18.4532 1.96968L7.33693 13.2388C7.24012 13.3372 7.12507 13.4154 6.99839 13.4687C6.87172 13.522 6.73591 13.5495 6.59874 13.5495C6.46158 13.5495 6.32577 13.522 6.19909 13.4687C6.07242 13.4154 5.95737 13.3372 5.86055 13.2388L0.997175 8.30853C0.900234 8.21026 0.823337 8.09359 0.770873 7.96519C0.718409 7.83679 0.691406 7.69917 0.691406 7.56019C0.691406 7.42122 0.718409 7.2836 0.770873 7.1552C0.823337 7.0268 0.900234 6.91013 0.997175 6.81186C1.09412 6.71359 1.2092 6.63563 1.33586 6.58245C1.46252 6.52926 1.59827 6.50189 1.73537 6.50189C1.87246 6.50189 2.00821 6.52926 2.13487 6.58245C2.26153 6.63563 2.37662 6.71359 2.47356 6.81186L6.59961 10.9946L16.9786 0.474766C17.1744 0.276295 17.4399 0.164795 17.7168 0.164795C17.9936 0.164795 18.2592 0.276295 18.455 0.474766C18.6507 0.673237 18.7607 0.942422 18.7607 1.2231C18.7607 1.50378 18.6507 1.77297 18.455 1.97144L18.4532 1.96968Z"
-                                                    fill={selectedColor === "#FFFFFF" ? "black" : "white"}
-                                                />
-                                            </svg>
-                                        )}
-                                    </div>
-                                ))}
+                                <div className="bg-[#F5F5F5] rounded-sm px-7.5 py-[8.5px]">
+                                    <img src={smallRouter} alt="" />
+                                </div>
+                                <div className="bg-[#F5F5F5] rounded-sm px-7.5 py-[8.5px]">
+                                    <img src={smallRouter} alt="" />
+                                </div>
                             </div>
                         </div>
-                        <div className="flex flex-col items-start gap-4 max-w-[568px] mx-auto lg:mx-0">
-                            <p className="text-[#112D49] font-semibold pt-[35px]">Select Quantity</p>
-                            <div className="flex items-center">
-                                <button
-                                    onClick={decreaseQuantity}
-                                    className="w-[48px] h-[44px] bg-[#73A4E0] text-white text-xl flex items-center justify-center rounded-l-[8px]"
-                                >
-                                    <ReduceIcon />
-                                </button>
-                                <div className="w-[85px] h-[44px] border border-[#C2C2C2] text-[#586C80] justify-center flex items-center">
-                                    {quantity.toString().padStart(2, "0")}
-                                </div>
-                                <button
-                                    onClick={increaseQuantity}
-                                    className="w-[48px] h-[44px] bg-[#112D49] text-white text-xl flex items-center justify-center rounded-r-[8px]"
-                                >
-                                    <IncreaseIcon />
-                                </button>
+                        <div className="max-w-[568px] mx-auto">
+                            <Heading headingClass="!text-xl sm:!text-[34px] !text-start" headingText="D-Link ADSL Wireless Router DSL2790U" />
+                            <Description descriptionClass="max-w-[560px] pt-4" descriptionText="The D-Link DSL-2790U is a high-speed ADSL2+ wireless router with speeds up to 300 Mbps—ideal for browsing, streaming, and gaming.
+                            It features four Ethernet ports, strong security, and guest network support. Perfect for reliable internet in homes and small offices"/>
+                            <p className='pt-4 font-bold text-[32px] text-[#112D49]'>₹1,281.08</p>
+                            <div className="mt-4 max-w-[197px] w-full"><RatingIcon /></div>
+                            <p className='font-semibold leading-[100%] text-[#112D49] mt-6'>Select Color</p>
+                            <div className="flex gap-1.5 mt-2.5">
+                                <div className="size-[29px] rounded-full bg-[#010101]"></div>
+                                <div className="size-[29px] rounded-full bg-[#112D49]"></div>
+                                <div className="size-[29px] rounded-full bg-[#20E572]"></div>
+                                <div className="size-[29px] rounded-full bg-[#FFFFFF] shadow-[0px_4px_6px_0px_#01010114]"></div>
+                                <div className="size-[29px] rounded-full bg-[#73A4E0]"></div>
                             </div>
-                            <div className="pt-[78px] w-full">
-                                <CustomButton
-                                    buttonClass="!w-full !py-[17px]"
-                                    buttonText="Buy Now"
-                                    onClick={handleBuyNow}
-                                />
-                                <CustomButton buttonClass="!w-full !py-[17px] mt-[20px] bg-white !text-[#112D49] hover:!bg-[#112D49] hover:!text-white border border-[#112D49]" buttonText="Add to Cart"
-                                    onClick={handleAddToCart}
-                                />
+                            <div className="mt-[35px]">
+                                <p className="leading-[100%] font-semibold text-[#112D49]">Select Quantity</p>
+                                <div className="flex max-w-[181px] mt-[15px]">
+                                    <button className='bg-[#73A4E0] hover:bg-[#73A4E0]/60 w-[48px] cursor-pointer transition-all duration-200 ease-linear h-[44px] flex items-center justify-center rounded-tl-[7px] rounded-bl-[7px]' onClick={decrement}><ReduceIcon /></button>
+                                    <div className="border-y border-[#0000003D] w-[85px] h-[44px] flex justify-center items-center">{count}</div>
+                                    <button className='bg-[#112D49] hover:bg-[#112D49]/60 cursor-pointer transition-all duration-200 ease-linear  w-[48px] h-[44px] flex items-center rounded-br-[7px] rounded-tr-[7px] justify-center' onClick={increment}><IncreaseIcon /></button>
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-5 mt-[78px]">
+                                <CustomButton btnClass="w-full bg-[#112D49] hover:bg-[#112D49]/80 text-white" btnText="Buy Now" />
+                                <CustomButton btnClass="w-full hover:bg-[#112D49]/80 hover:text-white" btnText="Add to cart" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    );
-};
+        </>
+    )
+}
 
-export default ProductDetail;
+export default ProductDetail
