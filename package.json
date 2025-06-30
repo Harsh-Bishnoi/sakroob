@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@material/tab-indicator": "^14.0.0",
     "@tailwindcss/vite": "^4.1.10",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-fast-marquee": "^1.6.5",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^7.6.2",
+    "react-tabs": "^6.1.0",
     "swiper": "^11.2.8",
     "tailwindcss": "^4.1.10"
   },

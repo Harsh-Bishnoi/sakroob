@@ -71,7 +71,7 @@ const AddToCart = () => {
                                 </tbody>
                             </table>
                         </div>
-                        <div className="border w-full mt-[49px]"></div>
+                        <div className="vertical-gradient w-full mt-[49px] relative"></div>
                         <div className="flex justify-end">
                             <div className="mt-5 max-w-[328px] pr-5">
                                 <div className="flex justify-between items-center">

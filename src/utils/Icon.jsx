@@ -453,19 +453,19 @@ export const TopArrow = () => (
 
 export const RatingIcon = () => (
     <svg width="197" height="37" viewBox="0 0 197 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_897_11606)">
+        <g clipPath="url(#clip0_897_11606)">
             <path d="M18.4309 26.1142L9.40149 31.6289L11.8562 21.3369L3.82227 14.455L14.3678 13.6101L18.4309 3.84033L22.4939 13.6101L33.041 14.455L25.0055 21.3369L27.4603 31.6289L18.4309 26.1142Z" fill="#FFD900" />
         </g>
-        <g clip-path="url(#clip1_897_11606)">
+        <g clipPath="url(#clip1_897_11606)">
             <path d="M58.3703 26.1142L49.3409 31.6289L51.7957 21.3369L43.7617 14.455L54.3073 13.6101L58.3703 3.84033L62.4334 13.6101L72.9805 14.455L64.945 21.3369L67.3997 31.6289L58.3703 26.1142Z" fill="#FFD900" />
         </g>
-        <g clip-path="url(#clip2_897_11606)">
+        <g clipPath="url(#clip2_897_11606)">
             <path d="M98.3098 26.1142L89.2804 31.6289L91.7351 21.3369L83.7012 14.455L94.2467 13.6101L98.3098 3.84033L102.373 13.6101L112.92 14.455L104.884 21.3369L107.339 31.6289L98.3098 26.1142Z" fill="#FFD900" />
         </g>
-        <g clip-path="url(#clip3_897_11606)">
+        <g clipPath="url(#clip3_897_11606)">
             <path d="M138.249 26.1142L129.22 31.6289L131.675 21.3369L123.641 14.455L134.186 13.6101L138.249 3.84033L142.312 13.6101L152.859 14.455L144.824 21.3369L147.279 31.6289L138.249 26.1142Z" fill="#FFD900" />
         </g>
-        <g clip-path="url(#clip4_897_11606)">
+        <g clipPath="url(#clip4_897_11606)">
             <path d="M178.189 26.1142L169.159 31.6289L171.614 21.3369L163.58 14.455L174.126 13.6101L178.189 3.84033L182.252 13.6101L192.799 14.455L184.763 21.3369L187.218 31.6289L178.189 26.1142Z" fill="#FFD900" />
         </g>
         <defs>
@@ -487,3 +487,52 @@ export const RatingIcon = () => (
         </defs>
     </svg>
 );
+
+export const ReviewStar = () => (
+    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.00049 11.2217L3.45146 14L4.68816 8.81482L0.640625 5.34771L5.9535 4.92206L8.00049 0L10.0475 4.92206L15.3611 5.34771L11.3128 8.81482L12.5495 14L8.00049 11.2217Z" fill="#FFD900" />
+    </svg>
+);
+
+export const ReviewArrow = () => (
+    <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.64453 13L7.64453 7L1.84844 1" stroke="#112D49" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+);
+
+export const ProfileStar = () => (
+    <svg width="117" height="21" viewBox="0 0 117 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clipPath="url(#clip0_897_11822)">
+            <path d="M11.1325 15.8922L5.21741 19.5049L6.82549 12.7626L1.5625 8.25437L8.4708 7.7009L11.1325 1.30078L13.7942 7.7009L20.7035 8.25437L15.4395 12.7626L17.0476 19.5049L11.1325 15.8922Z" fill="#FFD900" />
+        </g>
+        <g clipPath="url(#clip1_897_11822)">
+            <path d="M34.9372 15.8922L29.0221 19.5049L30.6302 12.7626L25.3672 8.25437L32.2755 7.7009L34.9372 1.30078L37.5989 7.7009L44.5082 8.25437L39.2442 12.7626L40.8522 19.5049L34.9372 15.8922Z" fill="#FFD900" />
+        </g>
+        <g clipPath="url(#clip2_897_11822)">
+            <path d="M58.7419 15.8922L52.8268 19.5049L54.4349 12.7626L49.1719 8.25437L56.0802 7.7009L58.7419 1.30078L61.4035 7.7009L68.3128 8.25437L63.0489 12.7626L64.6569 19.5049L58.7419 15.8922Z" fill="#FFD900" />
+        </g>
+        <g clipPath="url(#clip3_897_11822)">
+            <path d="M82.5465 15.8922L76.6315 19.5049L78.2395 12.7626L72.9766 8.25437L79.8849 7.7009L82.5465 1.30078L85.2082 7.7009L92.1175 8.25437L86.8535 12.7626L88.4616 19.5049L82.5465 15.8922Z" fill="#FFD900" />
+        </g>
+        <g clipPath="url(#clip4_897_11822)">
+            <path d="M106.351 15.8922L100.436 19.5049L102.044 12.7626L96.7812 8.25437L103.69 7.7009L106.351 1.30078L109.013 7.7009L115.922 8.25437L110.658 12.7626L112.266 19.5049L106.351 15.8922Z" fill="#FFD900" />
+        </g>
+        <defs>
+            <clipPath id="clip0_897_11822">
+                <rect width="20.8047" height="20.8047" fill="white" transform="translate(0.730469)" />
+            </clipPath>
+            <clipPath id="clip1_897_11822">
+                <rect width="20.8047" height="20.8047" fill="white" transform="translate(24.5352)" />
+            </clipPath>
+            <clipPath id="clip2_897_11822">
+                <rect width="20.8047" height="20.8047" fill="white" transform="translate(48.3398)" />
+            </clipPath>
+            <clipPath id="clip3_897_11822">
+                <rect width="20.8047" height="20.8047" fill="white" transform="translate(72.1445)" />
+            </clipPath>
+            <clipPath id="clip4_897_11822">
+                <rect width="20.8047" height="20.8047" fill="white" transform="translate(95.9492)" />
+            </clipPath>
+        </defs>
+    </svg>
+)

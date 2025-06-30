@@ -6,6 +6,8 @@ import CustomButton from './common/CustomButton'
 import routerImg from '../assets/images/png/router-img.png'
 import smallRouter from '../assets/images/png/small-router.png'
 import PopularProduct from './PopularProduct'
+import Reviews from './Reviews'
+
 const ProductDetail = () => {
     const [count, setCount] = useState(1);
     const increment = () => setCount(count + 1);
@@ -18,17 +20,17 @@ const ProductDetail = () => {
                     <div className="flex flex-wrap gap-[55px]">
                         <div className="mx-auto">
                             <div className="max-w-[517px] bg-[#EEF4FB] px-10.5 py-11 rounded-lg">
-                                <img className='w-full max-w-[432px]' src={routerImg} alt="" />
+                                <img className='w-full max-w-[432px] pointer-events-none' src={routerImg} alt="router-img" />
                             </div>
                             <div className="flex gap-5.5 mt-4 mx-auto">
                                 <div className="bg-[#F5F5F5] rounded-sm px-7.5 py-[8.5px]">
-                                    <img src={smallRouter} alt="" />
+                                    <img className='pointer-events-none' src={smallRouter} alt="router-img" />
                                 </div>
                                 <div className="bg-[#F5F5F5] rounded-sm px-7.5 py-[8.5px]">
-                                    <img src={smallRouter} alt="" />
+                                    <img className='pointer-events-none' src={smallRouter} alt="router-img" />
                                 </div>
                                 <div className="bg-[#F5F5F5] rounded-sm px-7.5 py-[8.5px]">
-                                    <img src={smallRouter} alt="" />
+                                    <img className='pointer-events-none' src={smallRouter} alt="router-img" />
                                 </div>
                             </div>
                         </div>
@@ -62,6 +64,7 @@ const ProductDetail = () => {
                     </div>
                 </div>
             </div>
+            <Reviews />
             <PopularProduct />
         </>
     )
