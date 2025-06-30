@@ -108,4 +108,9 @@ body {
         height: 31px !important;
         width: 40px !important;
     }
+
+    .search-icon svg {
+        width: 18px;
+        height: 19px;
+    }
 }

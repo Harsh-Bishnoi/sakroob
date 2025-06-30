@@ -127,9 +127,9 @@ const Header = () => {
             </div>
             <div className="bg-[#F1F6FC]">
                 <div className="py-2.5 px-4 w-full max-w-[1246px] mx-auto">
-                    <div className="relative w-full max-w-[689px] mx-auto">
+                    <div className="relative w-full max-w-[263px] sm:max-w-[689px] mx-auto">
                         <CustomInput type="text" placeholder="Search..." inputClass="!py-1.5 !px-3.5 sm:!py-[15px] w-full shadow sm:px-6" />
-                        <div className="absolute top-1/2 right-4 -translate-y-1/2 text-gray-500 cursor-pointer"><SearchIcon /></div>
+                        <div className="absolute top-1/2 right-4 -translate-y-1/2 text-gray-500 cursor-pointer search-icon"><SearchIcon /></div>
                     </div>
                 </div>
             </div>
