@@ -182,16 +182,6 @@ export const BESTSELLER_DATA = [
         id: 3
     },
     {
-        img: gamingPc,
-        title: "Vortex Gaming PC",
-        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-        price: 30000,
-        star: starImg,
-        heart: HeartIcon,
-        shop: ShopIcon,
-        id: 4
-    },
-    {
         img: wirelessRouter,
         title: "D-Link ADSL Wireless Router DSL2790U",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
@@ -199,16 +189,6 @@ export const BESTSELLER_DATA = [
         star: starImg,
         heart: HeartIcon,
         shop: ShopIcon,
-        id: 5
-    },
-    {
-        img: gamingChair,
-        title: "Gaming Chair",
-        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-        price: 21469,
-        star: starImg,
-        heart: HeartIcon,
-        shop: ShopIcon,
-        id: 6
+        id: 4
     },
 ];

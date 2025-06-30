@@ -74,7 +74,7 @@ const BestSellers = () => {
             )}
             <div className="max-w-[1272px] mx-auto relative">
                 <Heading headingText="Bestsellers" />
-                <div className="max-[1440px]:hidden flex justify-center xl:justify-between items-center gap-3 px-4 z-10 min-[1440px]:absolute xl:top-[60%] xl:-left-15 xl:-right-20 transform xl:-translate-y-1/2">
+                <div className="max-xl:hidden flex justify-between items-center gap-3 z-10 absolute top-[60%] left-0 right-0 transform xl:-translate-y-1/2">
                     <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
                         <LeftArrow />
                     </div>
@@ -83,8 +83,8 @@ const BestSellers = () => {
                     </div>
                 </div>
 
-                <div className="max-w-[1170px] mx-auto">
-                    <Swiper
+                <div className="max-w-[1140px] mx-auto">
+                    <Swiper className="max-w-[1244px]"
                         modules={[Navigation]}
                         loop
                         navigation={{
@@ -93,15 +93,15 @@ const BestSellers = () => {
                         }}
                         breakpoints={{
                             320: { slidesPerView: 1.1, spaceBetween: 10 },
-                            480: { slidesPerView: 1.3, spaceBetween: 12 },
+                            480: { slidesPerView: 1, spaceBetween: 12 },
                             640: { slidesPerView: 2, spaceBetween: 15 },
-                            768: { slidesPerView: 2.5, spaceBetween: 0 },
-                            1024: { slidesPerView: 2.8, spaceBetween: 0 },
+                            768: { slidesPerView: 2.5, spaceBetween: 15 },
+                            1024: { slidesPerView: 3, spaceBetween: 15 },
                             1280: { slidesPerView: 3, spaceBetween: 0 },
                         }}
                     >
                         {BESTSELLER_DATA.map((item, i) => (
-                            <SwiperSlide className="pt-[54px] sm:pt-[100px]" key={item.id}>
+                            <SwiperSlide className="pt-[100px]" key={item.id}>
                                 <div className="w-full sm:max-w-[364px] hover:shadow-[0px_0px_11.4px_0px_#73A4E033] border border-[#112D4914] hover:border-transparent duration-300 rounded-[8px] p-4 flex flex-col justify-between h-full min-h-[536px]">
                                     <div>
                                         <div className={`w-full h-[242px] flex items-center justify-center relative ${i === 1 ? "bg-[#EEF4FB]" : "bg-[#E5E4E2]"}`}>
@@ -117,7 +117,7 @@ const BestSellers = () => {
                                                 {favoriteItems.includes(i) ? <FilledHeart /> : <HeartIcon />}
                                             </div>
                                         </div>
-                                        <p className="font-bold text-xl leading-[120%] sm:text-2xl text-[#112D49] pt-4">{item.title}</p>
+                                        <p className="font-bold lg:text-xl leading-[120%]  text-[#112D49] pt-4">{item.title}</p>
                                         <p className="max-sm:text-sm text-[#41576D] pt-2">{item.description}</p>
                                     </div>
                                     <div>
@@ -145,7 +145,7 @@ const BestSellers = () => {
                     </Swiper>
                 </div>
 
-                <div className="min-[1440px]:hidden flex justify-center items-center gap-3 px-4 z-10 mt-6">
+                <div className="xl:hidden flex justify-center items-center gap-3 px-4 z-10 mt-6">
                     <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
                         <LeftArrow />
                     </div>
