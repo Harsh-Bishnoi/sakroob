@@ -3,11 +3,15 @@ import Heading from './common/Heading'
 import { POPULAR_PRODUCT } from '../utils/helper'
 import CustomButton from './common/CustomButton'
 import { FilledHeart, HeartIcon } from '../utils/Icon'
+import { useNavigate } from 'react-router-dom'
+import { useCart } from "../context/CartContext"
 
 const PopularProduct = () => {
     const [favourites, setFavourites] = useState([]);
     const [popupMessage, setPopupMessage] = useState("");
     const [showPopup, setShowPopup] = useState(false);
+    const navigate = useNavigate();
+    const { addToCart } = useCart();
 
     const showFavoritePopup = (message) => {
         setPopupMessage(message);
@@ -28,6 +32,16 @@ const PopularProduct = () => {
         }
     };
 
+    const handleAddToCart = (item) => {
+        addToCart(item);
+        setPopupMessage("Added to cart 🛒");
+        setShowPopup(true);
+        setTimeout(() => setShowPopup(false), 2000);
+    };
+
+    const handleShopNowClick = () => {
+        navigate("/checkout");
+    };
 
     return (
         <>
@@ -55,12 +69,12 @@ const PopularProduct = () => {
                                         <h3 className='font-bold text-xl xl:text-2xl leading-[120%] text-[#112D49'>{item.title}</h3>
                                         <p className='leading-[150%] text-[#112D49] opacity-80 pt-2'>{item.description}</p>
                                         <div className={`flex items-center justify-between ${index === 1 ? "mt-12.5 xl:mt-5.5" : "mt-[51px] "}`}>
-                                            <p className='font-semibold text-2xl leading-[100%] text-[#112D49]'>{item.price}</p>
+                                            <p className='font-semibold text-2xl leading-[100%] text-[#112D49]'>₹ {item.price}</p>
                                             <img className='max-w-[128px]' src={item.star} alt="star-img" />
                                         </div>
                                         <div className="flex items-center mt-[25px] gap-6">
-                                            <CustomButton btnClass="w-full hover:bg-[#112D49]/80 hover:text-white" btnText="Shop Now" />
-                                            <div
+                                            <CustomButton onClick={handleShopNowClick} btnClass="w-full hover:bg-[#112D49]/80 hover:text-white" btnText="Shop Now" />
+                                            <div onClick={() => handleAddToCart(item)}
                                                 className="cursor-pointer flex justify-center items-center bg-[#73A4E0] min-w-[48px] min-h-[48px] rounded-full hover:bg-[#112D49] transition-colors" >
                                                 <item.shop />
                                             </div>

@@ -46,7 +46,7 @@ const AddToCart = () => {
                                                 </div>
                                                 <div>
                                                     <h4 className="font-medium text-xl text-[#112D49] max-w-[300px]">{item.title}</h4>
-                                                    <p className="text-sm text-[#112D49] opacity-50">₹ {item.price.toFixed(2)}</p>
+                                                    <p className="text-sm text-[#112D49] opacity-50">₹ {item.price}</p>
                                                 </div>
                                             </td>
                                             <td className="text-start w-[222px] pr-20 pt-[47px]">
@@ -65,7 +65,7 @@ const AddToCart = () => {
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td className="text-start pr-5 w-[150px] text-[#112D49] pt-[47px] opacity-80">₹ {(item.price * item.quantity).toFixed(2)}</td>
+                                            <td className="text-start pr-5 w-[150px] text-[#112D49] pt-[47px] opacity-80"> {(item.price * item.quantity)}</td>
                                         </tr>
                                     ))}
                                 </tbody>
@@ -76,7 +76,7 @@ const AddToCart = () => {
                             <div className="mt-5 max-w-[328px] pr-5">
                                 <div className="flex justify-between items-center">
                                     <p className='text-[#112D49]'>Estimated total</p>
-                                    <p className='text-[#112D49] font-semibold'>₹ {totalAmount.toFixed(2)}</p>
+                                    <p className='text-[#112D49] font-semibold'>₹ {totalAmount}</p>
                                 </div>
                                 <p className='pt-2 text-[#112D49] opacity-80'>Taxes, discounts and shipping calculated at checkout.</p>
                                 <CustomButton onClick={handleCheckout} btnClass="w-full bg-[#112D49] text-white mt-6 mb-5 hover:bg-[#112D49]/80" btnText="Check out" />

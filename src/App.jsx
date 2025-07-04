@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
-
 import AddToCart from './components/AddToCart';
 import Footer from './components/common/Footer';
 import Header from './components/common/Header';
